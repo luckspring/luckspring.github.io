@@ -81,7 +81,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="https://luckspring.github.io/blog/" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="https://luckspring.github.io/" title="github"><i class="icon-github"></i></a>
 		        
 					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 		        
@@ -124,7 +124,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="https://luckspring.github.io/blog/" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="https://luckspring.github.io/" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 			        
@@ -157,6 +157,88 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-about-hexo-and-github" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/27/about-hexo-and-github/">hexo和github 的一些问题说明</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/27/about-hexo-and-github/" class="archive-article-date">
+  	<time datetime="2017-07-27T07:18:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　这篇文章是针对上一篇文章写的，主要是针对一些常见的问题的说明，在这个过程中。</p>
+<h2 id="问题说明"><a href="#问题说明" class="headerlink" title="问题说明"></a>问题说明</h2><h3 id="hexo相关问题"><a href="#hexo相关问题" class="headerlink" title="hexo相关问题"></a>hexo相关问题</h3><p>　　hexo一般来说搭建好以后基本就不会有什么问题，我仔细的分析了下它使用git的过程，其实就是生成页面以后，把public里面的东西推送到github上而已。一般会操作基本没有什么问题</p>
+<h3 id="关于主题"><a href="#关于主题" class="headerlink" title="关于主题"></a>关于主题</h3><p> 　　关于主题在这里要多说一点，我主要遇到了以下几个问题:<br>　　 1：下载替换主题以后死活改不了相关的图标<br>　　　　　这里主要要说明的是：在hexo init, npm install, hexo g, 以后生成的_config.yml中更改图片是无效的，必须要在你的主题中的_config.yml（例如我的在my_blog/themes/yilia)进行更改,才会让图标更改生效，我一直在博客主目录下进行更改是没有用。<br>　　2：修改_config.yml注意事项<br>　　　　markdown对语法的检查比较严格，在每一个新增内容的后面，需要注意冒号后面一定要用空格。</p>
+<h3 id="关于github"><a href="#关于github" class="headerlink" title="关于github"></a>关于github</h3><p>　　所有更改提交到github以后，需要比较长的时间等待，更改才会生效。所以不要着急。<br>　　还有一点，我仔细研究了，如果你是以自己的github的名字命名的工程，那个这个就是github的博客页。如果是以其他工程在gh-pages上面提交的博客，这一页就是你对工程的说明。</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>　　能力有限，就先写这么多吧。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">杂谈</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/27/about-hexo-and-github/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
