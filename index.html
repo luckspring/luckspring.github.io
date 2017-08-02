@@ -175,8 +175,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>　　在我把所有的博客环境搭建后以后，不可避免的就涉及到在本地怎么写博客，找了几款markdown编辑器，最后发现MarkdownPad2 比较好好用，就决定使用这款，不可避免的，由于使用的是别人的模板，那么自己编写过程中肯定会遇到各种各样的问题，在这里就把遇到的问题以及我自己的解决办法写出来，仅供参考。  </p>
-<h2 id="遇到的问题及解决办法"><a href="#遇到的问题及解决办法" class="headerlink" title="遇到的问题及解决办法"></a>遇到的问题及解决办法</h2><p>　　1. 首行缩进 使用输入法全角符模式，连续两个空格即实现首行缩进。<br>　　2. 段落换行 在输入法半角模式下，连续两个空格外加一个enter回车即可实现。<br>　　3. tags 如果想在tags后面多加几条，首先在tags的冒火后面增加空格，然后回车，然后使用tab键，输入- 然后空格 输入第一个标签名，然后回车，自动出现缩进和-，空格然后输入第二个标签就可以了。<br>　　4. 有序列表，只要在数字后面加一个英文的句点即可实现。<br>　　5. 使用#表示标题，其中#表示一级标题，##表示二级标题，以此类推，总共有6级。在#后面要加空格，不然就会把#也当做标题的一部分。</p>
-
+<h2 id="遇到的问题及解决办法"><a href="#遇到的问题及解决办法" class="headerlink" title="遇到的问题及解决办法"></a>遇到的问题及解决办法</h2><p>　　1. 首行缩进 使用输入法全角符模式，连续两个空格即实现首行缩进。<br>　　2. 段落换行 在输入法半角模式下，连续两个空格外加一个enter回车即可实现。<br>　　3. tags 如果想在tags后面多加几条，首先在tags的冒火后面增加空格，然后回车，然后使用tab键，输入- 然后空格 输入第一个标签名，然后回车，自动出现缩进和-，空格然后输入第二个标签就可以了。<br>　　4. 有序列表，只要在数字后面加一个英文的句点即可实现。<br>　　5. 使用#表示标题，其中#表示一级标题，##表示二级标题，以此类推，总共有6级。在#后面要加空格，不然就会把#也当做标题的一部分。<br>
+        
+          <a class="article-more-a" href="/2017/08/02/markdown-使用技巧汇总/#more">more >></a>
+        
       
 
       
@@ -254,26 +256,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>　　我自己本身原来是一枚嵌入式c工程师，基本上使用的都是c语言，用以编写驱动和应用程序，但是因后面工作需要，转向学习c++,本文也算是抛砖引玉，用以开始我的c++学习之路。</p>
-<h2 id="关于list容器"><a href="#关于list容器" class="headerlink" title="关于list容器"></a>关于list容器</h2><p>　　list 是一种序列式容器，list容器完成的功能其实与数据结构中的双向链表特别相似。list中的数据元素是通过链表指针串成实际的线性表，也就是说其实list具有链表的快速插入和删除功能。list的实现是这样的，list具有一个头域指针，一个数据域和一个尾域指针。头域指针保存了前一个元素的地址，尾域指指针保存了下一个元素的地址。还有一点，list容器和双向循环列表特别类似，即头结点的头域指针存储的是尾结点的地址，尾结点的尾域指针存储的是头结点的地址。由于list结点并不要求存储在连续的内存地址中，因此只能++或者–，而不能进行+n和-n这种快速存取。</p>
-<h2 id="vector-list-deque-比较"><a href="#vector-list-deque-比较" class="headerlink" title="vector list deque 比较"></a>vector list deque 比较</h2><p>　　vector：和数组类似，拥有一段连续的内存空间，能够非常好的支持随机存取，即[]操作符，但是由于内存空间是连续的，所以在中间进行插入和删除时会造成内存块的拷贝，另外，当插入较多的元素后，预留的空间可能不足，需要重新申请一块足够大的内存并把原来的数据进行拷贝，会影响他的执行效率。<br>　　list： list其实就是数据结构中的双向链表，因此他的内存空间是不连续的，使用指针来进行数据访问，但是这个特点使其随即存储变得非常没有效率，因为其并没有提供[]的重载，但同时它包含了链表的特点，即可以在任意地方进行删除和插入。<br>　　deque： deque是一个double-ended queue，它的具体实现不太清楚，但知道它具有以下两个特点：它支持[]操作符，也就是支持随即存取，并且和vector的效率相差无几，它支持在两端的操作：push_back,push_front,pop_back,pop_front等，并且在两端操作上与list的效率也差不多。<br>　　在使用中的选择：  </p>
-<pre><code>1. 如果你需要高效的随即存取，而不在乎插入和删除的效率，使用vector  
-2.  如果你需要大量的插入和删除，而不关心随即存取，则应使用list  
-3.  如果你需要随即存取，而且关心两端数据的插入和删除，则应使用deque
-</code></pre><h2 id="list中的常用函数"><a href="#list中的常用函数" class="headerlink" title="list中的常用函数"></a>list中的常用函数</h2><h3 id="list中的构造函数"><a href="#list中的构造函数" class="headerlink" title="list中的构造函数"></a>list中的构造函数</h3><p>　　list() 声明一个空列表；<br>　　list(n) 声明一个有n个元素的列表，每个元素都是由其默认构造函数T()构造出来的<br>　　ｌist(n,val) 声明一个由n个元素的列表，每个元素都是由其复制构造函数T(val)得来的<br>　　list(n,val) 声明一个和上面一样的列表<br>　　list(first,last) 声明一个列表，其元素的初始值来源于由区间所指定的序列中的元素  </p>
-<h3 id="begin-和end"><a href="#begin-和end" class="headerlink" title="begin() 和end()"></a>begin() 和end()</h3><p>　　通过调用list容器的成员函数begin()得到一个指向容器起始位置的iterator，可以调用list容器的 end() 函数来得到list末端下一位置，相当于：int a[n]中的第n+1个位置a[n]，实际上是不存在的，不能访问，经常作为循环结束判断结束条件使用。</p>
-<h3 id="push-back-和push-front"><a href="#push-back-和push-front" class="headerlink" title="push_back()和push_front()"></a>push_back()和push_front()</h3><p>　　使用list的成员函数push_back和push_front插入一个元素到list中。其中push_back()从list的末端插入，而 push_front()实现的从list的头部插入。</p>
-<h3 id="empty"><a href="#empty" class="headerlink" title="empty()"></a>empty()</h3><p>　　利用empty() 判断list是否为空。</p>
-<h3 id="resize"><a href="#resize" class="headerlink" title="resize()"></a>resize()</h3><p>　　如果调用resize(n)将list的长度改为只容纳n个元素，超出的元素将被删除，如果需要扩展那么调用默认构造函数T()将元素加到list末端。如果调用resize(n,val)，则扩展元素要调用构造函数T(val)函数进行元素构造，其余部分相同。</p>
-<h3 id="clear"><a href="#clear" class="headerlink" title="clear()"></a>clear()</h3><p>　　清空list中的所有元素。</p>
-<h3 id="front-和back"><a href="#front-和back" class="headerlink" title="front()和back()"></a>front()和back()</h3><p>　　通过front()可以获得list容器中的头部元素，通过back()可以获得list容器的最后一个元素。但是有一点要注意，就是list中元素是空的时候，这时候调用front()和back()会发生什么呢？实际上会发生不能正常读取数据的情况，但是这并不报错，那我们编程序时就要注意了，个人觉得在使用之前最好先调用empty()函数判断list是否为空</p>
-<h3 id="pop-back-和pop-front"><a href="#pop-back-和pop-front" class="headerlink" title="pop_back()和pop_front()"></a>pop_back()和pop_front()</h3><p>　　通过pop_back()删除最后一个元素，通过pop_front()删除第一个元素；序列必须不为空，如果当list为空的时候调用pop_back()和pop_front()会使程序崩掉。</p>
-<h3 id="assign"><a href="#assign" class="headerlink" title="assign()"></a>assign()</h3><p>　　1. l1.assign(n,val)： 将 l1中元素变为n个T(val）。<br>　　2. l1.assign(l2.begin(),l2.end()) ： 将l2中的从l2.begin()到l2.end()之间的数值赋值给l1</p>
-<h3 id="swap"><a href="#swap" class="headerlink" title="swap()"></a>swap()</h3><p>　　交换两个链表(两个重载)，一个是l1.swap(l2); 另外一个是swap(l1,l2)，都可能完成连个链表的交换。</p>
-<h3 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h3><p>　　通过reverse 实现list的逆序</p>
-<h3 id="merger"><a href="#merger" class="headerlink" title="merger()"></a>merger()</h3><p>　　合并两个链表并使之默认升序(也可改)，l1.merge(l2，greater<int>()); 调用结束后l2变为空，l1中元素包含原来l1 和 l2中的元素，并且排好序，升序。其实默认是升序，greater<int>()可以省略，另外greater<int>()是可以变的，也可以不按升序排列。</int></int></int></p>
-<h3 id="insert"><a href="#insert" class="headerlink" title="insert()"></a>insert()</h3><p>　　在指定位置插入一个或者多个元素 (三个重载)<br>　　1. l1.insert(l1.begin(),100); 在l1的开始位置插入100。<br>　　2. l1.insert(l1.begin(),2,200); 在l1的开始位置插入2个100。<br>　　3. l1.insert(l1.begin(),l2.begin(),l2.end());在l1的开始位置插入l2的从开始到结束的所有位置的元素。</p>
-<h3 id="erase"><a href="#erase" class="headerlink" title="erase()"></a>erase()</h3><p>　　删除一个元素或一个区域的元素(两个重载)<br>　　1. 1.erase(l1.begin()); 将l1的第一个元素删除。<br>　　2. l1.erase(l1.begin(),l1.end()); 将l1的从begin()到end()之间的元素删除。</p>
-
+<h2 id="关于list容器"><a href="#关于list容器" class="headerlink" title="关于list容器"></a>关于list容器</h2><p>　　list 是一种序列式容器，list容器完成的功能其实与数据结构中的双向链表特别相似。list中的数据元素是通过链表指针串成实际的线性表，也就是说其实list具有链表的快速插入和删除功能。list的实现是这样的，list具有一个头域指针，一个数据域和一个尾域指针。头域指针保存了前一个元素的地址，尾域指指针保存了下一个元素的地址。还有一点，list容器和双向循环列表特别类似，即头结点的头域指针存储的是尾结点的地址，尾结点的尾域指针存储的是头结点的地址。由于list结点并不要求存储在连续的内存地址中，因此只能++或者–，而不能进行+n和-n这种快速存取。<br>
+        
+          <a class="article-more-a" href="/2017/08/02/c-list-小结/#more">more >></a>
+        
       
 
       
@@ -355,8 +341,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>　　在使用ubuntu的过程中遇到过各种各样的问题，这篇博客博文只是简略的介绍最常见的一种情况。</p>
-<h2 id="详细情况"><a href="#详细情况" class="headerlink" title="详细情况"></a>详细情况</h2><p>　　我出现这个问题是在vitural box中安装了14.04，一般来说是不会出现什么问题，但是如果中途更换过源list,升级过软件之后，总会出现这样那样的问题，一般来说就是重新启动以后，系统没有进入图形界面，而是直接进入了字符界面。<br>　　我个人的解决办法是这样的，字符界面先登录，登录成功以后输入：sudo /etc/init.d/lightdm restart 重启后就进入了图形化界面了。</p>
-
+<h2 id="详细情况"><a href="#详细情况" class="headerlink" title="详细情况"></a>详细情况</h2><p>　　我出现这个问题是在vitural box中安装了14.04，一般来说是不会出现什么问题，但是如果中途更换过源list,升级过软件之后，总会出现这样那样的问题，一般来说就是重新启动以后，系统没有进入图形界面，而是直接进入了字符界面。<br>　　我个人的解决办法是这样的，字符界面先登录，登录成功以后输入：sudo /etc/init.d/lightdm restart 重启后就进入了图形化界面了。<br>
+        
+          <a class="article-more-a" href="/2017/07/31/ubuntu-start/#more">more >></a>
+        
       
 
       
@@ -430,11 +418,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>　　这篇文章是针对上一篇文章写的，主要是针对一些常见的问题的说明，在这个过程中。</p>
-<h2 id="问题说明"><a href="#问题说明" class="headerlink" title="问题说明"></a>问题说明</h2><h3 id="hexo相关问题"><a href="#hexo相关问题" class="headerlink" title="hexo相关问题"></a>hexo相关问题</h3><p>　　hexo一般来说搭建好以后基本就不会有什么问题，我仔细的分析了下它使用git的过程，其实就是生成页面以后，把public里面的东西推送到github上而已。一般会操作基本没有什么问题</p>
-<h3 id="关于主题"><a href="#关于主题" class="headerlink" title="关于主题"></a>关于主题</h3><p> 　　关于主题在这里要多说一点，我主要遇到了以下几个问题:<br>　　 1：下载替换主题以后死活改不了相关的图标<br>　　　　　这里主要要说明的是：在hexo init, npm install, hexo g, 以后生成的_config.yml中更改图片是无效的，必须要在你的主题中的_config.yml（例如我的在my_blog/themes/yilia)进行更改,才会让图标更改生效，我一直在博客主目录下进行更改是没有用。<br>　　2：修改_config.yml注意事项<br>　　　　markdown对语法的检查比较严格，在每一个新增内容的后面，需要注意冒号后面一定要用空格。</p>
-<h3 id="关于github"><a href="#关于github" class="headerlink" title="关于github"></a>关于github</h3><p>　　所有更改提交到github以后，需要比较长的时间等待，更改才会生效。所以不要着急。<br>　　还有一点，我仔细研究了，如果你是以自己的github的名字命名的工程，那个这个就是github的博客页。如果是以其他工程在gh-pages上面提交的博客，这一页就是你对工程的说明。</p>
-<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>　　能力有限，就先写这么多吧。</p>
-
+<h2 id="问题说明"><a href="#问题说明" class="headerlink" title="问题说明"></a>问题说明</h2><h3 id="hexo相关问题"><a href="#hexo相关问题" class="headerlink" title="hexo相关问题"></a>hexo相关问题</h3><p>　　hexo一般来说搭建好以后基本就不会有什么问题，我仔细的分析了下它使用git的过程，其实就是生成页面以后，把public里面的东西推送到github上而已。一般会操作基本没有什么问题<br>
+        
+          <a class="article-more-a" href="/2017/07/27/about-hexo-and-github/#more">more >></a>
+        
       
 
       
@@ -513,12 +500,10 @@
       
         <p> 　　这是我的第一篇博客，也是我搭建博客的历程，作为初入博客的弱鸡，在搭建博客的过程中各种踩坑，总之是把所有能遇到的坑都遇到了一遍，此中心酸不足为外人道也。特写下这一边搭建的心路历程，聊以自慰。</p>
 <h2 id="搭建之路"><a href="#搭建之路" class="headerlink" title="搭建之路"></a>搭建之路</h2><h3 id="搭建原由"><a href="#搭建原由" class="headerlink" title="搭建原由"></a>搭建原由</h3><p>　　作为一个立志把程序猿一路走到黑的弱鸡，没有自己的博客怎么保留下学习之路呢，另外一方面也有装x的嫌疑在里面。但不可否认，有一个自己的博客专门用来保存自己所遇到的问题已经解决办法很有必要。</p>
-<p> 　　以前每次遇到问题，找到解决办法以后都是借助office工具来进行保存，但是在遇到问题多了以后，各种文档各种乱，而且不同电脑和不同地点还没有办法及时进行查找。也采用过使用u盘，但是又存在u盘丢失的风险，所以最终还是走上了搭建博客这条道路。 </p>
-<h3 id="搭建环境选择"><a href="#搭建环境选择" class="headerlink" title="搭建环境选择"></a>搭建环境选择</h3><p>  　　第一次搭建博客，是看到github上面各种大神的页面，酷炫得一逼。忍不住自己动手，当时在知乎上面找寻各种资料，各种介绍，看得眼花缭乱，自己搭建的时候首先是采用的jekyll 当时遇到各种各样的问题，也是特别蛋疼。<br>  　　最终自己动手搭建了环境，各种jekyll环境都弄好了，git bash也安装好了，动手运行服务器也正常了，但是等我隔几天想要来重新弄的时候发现，git bash上面运行jekyll始终会报错，总是说找不到运行文件，好吧，手动添加运行环境的路径到profile文件下面，运行路径找到了，但是，运行起来又提示系统目录下没有，倒腾半天没倒腾出来，一怒之下，把所有的环境在Ubuntu中搭建了一遍。<br> 　　 安装git小白操作，略过不说。<br>　　1 首先安装ruby 系统自带的是1.9.x有木有，无法安装jekyll,好吧，卸载了系统的ruby 直接使用源码安装。<br>　　2 make 的时候编译各种报错，各种configure找不到，上网一查，Ubuntu自带的脚本默认是dash，修改为bash，编译安装，安装完以后运行提示 ： -bash: /usr/bin/ruby: No such file or directory，坑爹有木有，然后一查，自己的安装目录在/usr/local/bin 里面，系统默认的目录是/usr/bin , 建立一个软连接 ln -s /usr/local/bin/ruby /usr/bin/dash , 解决完以后。安装jekyll 一切正常，运行jekyll server 提示没有安装openssl。<br>　　3 重新安装ubuntu下的openssl ,问题解决，一切正常。 但是在这里要怎么编写自己的博客没有一点头绪，而且比较希望能在windows下面弄，这样好些。</p>
-<p>   　　于是重新找攻略，迈步重头越，由于有了前面的血泪史，这次直接在github上面找。最后选定了用hexo+git先搭建自己的博客。然后又是一路血泪史。</p>
-<h3 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h3><p> 　　Windows10下面搭建，完全是是用命令行工具来实现。<br>　　在搭建的过程中，首先安装git bash 小白操作，略过不说，不过需要说明的一点是一定把git安装成在命令行模式下可以进行提交。如下如所示<br>　　<img src="img/bash.jpg" alt=""><br>　　安装完成git以后，安装node.js 安装好以后再进行hexo的安装，这个安装比较简单，新建目录hexo 执行 npm install hexo-cli g 安装完成以后再执行 npm install hexo –save 然后再执行 hexo -v 如果出现版本信息，就是安装好了。特别注意如果需要提交到github上面，一定要使用npm install hexo-deployer-git –save</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>　　　我发现如果要写太多东西实在是写不下，很多细节略过，后面专门写blog说明吧。</p>
-
+<p> 　　以前每次遇到问题，找到解决办法以后都是借助office工具来进行保存，但是在遇到问题多了以后，各种文档各种乱，而且不同电脑和不同地点还没有办法及时进行查找。也采用过使用u盘，但是又存在u盘丢失的风险，所以最终还是走上了搭建博客这条道路。<br>
+        
+          <a class="article-more-a" href="/2017/07/27/hello-world/#more">more >></a>
+        
       
 
       

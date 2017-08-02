@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>hexo和github 的一些问题说明 | luckspring 的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这篇文章是针对上一篇文章写的，主要是针对一些常见的问题的说明，在这个过程中。 问题说明hexo相关问题　　hexo一般来说搭建好以后基本就不会有什么问题，我仔细的分析了下它使用git的过程，其实就是生成页面以后，把public里面的东西推送到github上而已。一般会操作基本没有什么问题 关于主题 　　关于主题在这里要多说一点，我主要遇到了以下几个问题:　　 1：下载替换主题以后死活改不了相关">
+  <meta name="description" content="这篇文章是针对上一篇文章写的，主要是针对一些常见的问题的说明，在这个过程中。 问题说明hexo相关问题　　hexo一般来说搭建好以后基本就不会有什么问题，我仔细的分析了下它使用git的过程，其实就是生成页面以后，把public里面的东西推送到github上而已。一般会操作基本没有什么问题">
 <meta name="keywords" content="学习,杂谈">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo和github 的一些问题说明">
 <meta property="og:url" content="http://yoursite.com/2017/07/27/about-hexo-and-github/index.html">
 <meta property="og:site_name" content="luckspring 的博客">
-<meta property="og:description" content="这篇文章是针对上一篇文章写的，主要是针对一些常见的问题的说明，在这个过程中。 问题说明hexo相关问题　　hexo一般来说搭建好以后基本就不会有什么问题，我仔细的分析了下它使用git的过程，其实就是生成页面以后，把public里面的东西推送到github上而已。一般会操作基本没有什么问题 关于主题 　　关于主题在这里要多说一点，我主要遇到了以下几个问题:　　 1：下载替换主题以后死活改不了相关">
-<meta property="og:updated_time" content="2017-07-27T07:49:02.603Z">
+<meta property="og:description" content="这篇文章是针对上一篇文章写的，主要是针对一些常见的问题的说明，在这个过程中。 问题说明hexo相关问题　　hexo一般来说搭建好以后基本就不会有什么问题，我仔细的分析了下它使用git的过程，其实就是生成页面以后，把public里面的东西推送到github上而已。一般会操作基本没有什么问题">
+<meta property="og:updated_time" content="2017-08-02T10:08:45.607Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo和github 的一些问题说明">
-<meta name="twitter:description" content="这篇文章是针对上一篇文章写的，主要是针对一些常见的问题的说明，在这个过程中。 问题说明hexo相关问题　　hexo一般来说搭建好以后基本就不会有什么问题，我仔细的分析了下它使用git的过程，其实就是生成页面以后，把public里面的东西推送到github上而已。一般会操作基本没有什么问题 关于主题 　　关于主题在这里要多说一点，我主要遇到了以下几个问题:　　 1：下载替换主题以后死活改不了相关">
+<meta name="twitter:description" content="这篇文章是针对上一篇文章写的，主要是针对一些常见的问题的说明，在这个过程中。 问题说明hexo相关问题　　hexo一般来说搭建好以后基本就不会有什么问题，我仔细的分析了下它使用git的过程，其实就是生成页面以后，把public里面的东西推送到github上而已。一般会操作基本没有什么问题">
   
     <link rel="alternative" href="/atom.xml" title="luckspring 的博客" type="application/atom+xml">
   
@@ -175,7 +175,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>　　这篇文章是针对上一篇文章写的，主要是针对一些常见的问题的说明，在这个过程中。</p>
-<h2 id="问题说明"><a href="#问题说明" class="headerlink" title="问题说明"></a>问题说明</h2><h3 id="hexo相关问题"><a href="#hexo相关问题" class="headerlink" title="hexo相关问题"></a>hexo相关问题</h3><p>　　hexo一般来说搭建好以后基本就不会有什么问题，我仔细的分析了下它使用git的过程，其实就是生成页面以后，把public里面的东西推送到github上而已。一般会操作基本没有什么问题</p>
+<h2 id="问题说明"><a href="#问题说明" class="headerlink" title="问题说明"></a>问题说明</h2><h3 id="hexo相关问题"><a href="#hexo相关问题" class="headerlink" title="hexo相关问题"></a>hexo相关问题</h3><p>　　hexo一般来说搭建好以后基本就不会有什么问题，我仔细的分析了下它使用git的过程，其实就是生成页面以后，把public里面的东西推送到github上而已。一般会操作基本没有什么问题<br><a id="more"></a></p>
 <h3 id="关于主题"><a href="#关于主题" class="headerlink" title="关于主题"></a>关于主题</h3><p> 　　关于主题在这里要多说一点，我主要遇到了以下几个问题:<br>　　 1：下载替换主题以后死活改不了相关的图标<br>　　　　　这里主要要说明的是：在hexo init, npm install, hexo g, 以后生成的_config.yml中更改图片是无效的，必须要在你的主题中的_config.yml（例如我的在my_blog/themes/yilia)进行更改,才会让图标更改生效，我一直在博客主目录下进行更改是没有用。<br>　　2：修改_config.yml注意事项<br>　　　　markdown对语法的检查比较严格，在每一个新增内容的后面，需要注意冒号后面一定要用空格。</p>
 <h3 id="关于github"><a href="#关于github" class="headerlink" title="关于github"></a>关于github</h3><p>　　所有更改提交到github以后，需要比较长的时间等待，更改才会生效。所以不要着急。<br>　　还有一点，我仔细研究了，如果你是以自己的github的名字命名的工程，那个这个就是github的博客页。如果是以其他工程在gh-pages上面提交的博客，这一页就是你对工程的说明。</p>
 <h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>　　能力有限，就先写这么多吧。</p>

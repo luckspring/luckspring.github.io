@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="luckspring 的博客">
 <meta property="og:description" content="这是我的第一篇博客，也是我搭建博客的历程，作为初入博客的弱鸡，在搭建博客的过程中各种踩坑，总之是把所有能遇到的坑都遇到了一遍，此中心酸不足为外人道也。特写下这一边搭建的心路历程，聊以自慰。 搭建之路搭建原由　　作为一个立志把程序猿一路走到黑的弱鸡，没有自己的博客怎么保留下学习之路呢，另外一方面也有装x的嫌疑在里面。但不可否认，有一个自己的博客专门用来保存自己所遇到的问题已经解决办法很有必要。">
 <meta property="og:image" content="http://yoursite.com/2017/07/27/hello-world/img/bash.jpg">
-<meta property="og:updated_time" content="2017-07-27T03:42:30.009Z">
+<meta property="og:updated_time" content="2017-08-02T10:04:47.286Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初始 入坑之路">
 <meta name="twitter:description" content="这是我的第一篇博客，也是我搭建博客的历程，作为初入博客的弱鸡，在搭建博客的过程中各种踩坑，总之是把所有能遇到的坑都遇到了一遍，此中心酸不足为外人道也。特写下这一边搭建的心路历程，聊以自慰。 搭建之路搭建原由　　作为一个立志把程序猿一路走到黑的弱鸡，没有自己的博客怎么保留下学习之路呢，另外一方面也有装x的嫌疑在里面。但不可否认，有一个自己的博客专门用来保存自己所遇到的问题已经解决办法很有必要。">
@@ -178,7 +178,7 @@
       
         <p> 　　这是我的第一篇博客，也是我搭建博客的历程，作为初入博客的弱鸡，在搭建博客的过程中各种踩坑，总之是把所有能遇到的坑都遇到了一遍，此中心酸不足为外人道也。特写下这一边搭建的心路历程，聊以自慰。</p>
 <h2 id="搭建之路"><a href="#搭建之路" class="headerlink" title="搭建之路"></a>搭建之路</h2><h3 id="搭建原由"><a href="#搭建原由" class="headerlink" title="搭建原由"></a>搭建原由</h3><p>　　作为一个立志把程序猿一路走到黑的弱鸡，没有自己的博客怎么保留下学习之路呢，另外一方面也有装x的嫌疑在里面。但不可否认，有一个自己的博客专门用来保存自己所遇到的问题已经解决办法很有必要。</p>
-<p> 　　以前每次遇到问题，找到解决办法以后都是借助office工具来进行保存，但是在遇到问题多了以后，各种文档各种乱，而且不同电脑和不同地点还没有办法及时进行查找。也采用过使用u盘，但是又存在u盘丢失的风险，所以最终还是走上了搭建博客这条道路。 </p>
+<p> 　　以前每次遇到问题，找到解决办法以后都是借助office工具来进行保存，但是在遇到问题多了以后，各种文档各种乱，而且不同电脑和不同地点还没有办法及时进行查找。也采用过使用u盘，但是又存在u盘丢失的风险，所以最终还是走上了搭建博客这条道路。<br><a id="more"></a></p>
 <h3 id="搭建环境选择"><a href="#搭建环境选择" class="headerlink" title="搭建环境选择"></a>搭建环境选择</h3><p>  　　第一次搭建博客，是看到github上面各种大神的页面，酷炫得一逼。忍不住自己动手，当时在知乎上面找寻各种资料，各种介绍，看得眼花缭乱，自己搭建的时候首先是采用的jekyll 当时遇到各种各样的问题，也是特别蛋疼。<br>  　　最终自己动手搭建了环境，各种jekyll环境都弄好了，git bash也安装好了，动手运行服务器也正常了，但是等我隔几天想要来重新弄的时候发现，git bash上面运行jekyll始终会报错，总是说找不到运行文件，好吧，手动添加运行环境的路径到profile文件下面，运行路径找到了，但是，运行起来又提示系统目录下没有，倒腾半天没倒腾出来，一怒之下，把所有的环境在Ubuntu中搭建了一遍。<br> 　　 安装git小白操作，略过不说。<br>　　1 首先安装ruby 系统自带的是1.9.x有木有，无法安装jekyll,好吧，卸载了系统的ruby 直接使用源码安装。<br>　　2 make 的时候编译各种报错，各种configure找不到，上网一查，Ubuntu自带的脚本默认是dash，修改为bash，编译安装，安装完以后运行提示 ： -bash: /usr/bin/ruby: No such file or directory，坑爹有木有，然后一查，自己的安装目录在/usr/local/bin 里面，系统默认的目录是/usr/bin , 建立一个软连接 ln -s /usr/local/bin/ruby /usr/bin/dash , 解决完以后。安装jekyll 一切正常，运行jekyll server 提示没有安装openssl。<br>　　3 重新安装ubuntu下的openssl ,问题解决，一切正常。 但是在这里要怎么编写自己的博客没有一点头绪，而且比较希望能在windows下面弄，这样好些。</p>
 <p>   　　于是重新找攻略，迈步重头越，由于有了前面的血泪史，这次直接在github上面找。最后选定了用hexo+git先搭建自己的博客。然后又是一路血泪史。</p>
 <h3 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h3><p> 　　Windows10下面搭建，完全是是用命令行工具来实现。<br>　　在搭建的过程中，首先安装git bash 小白操作，略过不说，不过需要说明的一点是一定把git安装成在命令行模式下可以进行提交。如下如所示<br>　　<img src="img/bash.jpg" alt=""><br>　　安装完成git以后，安装node.js 安装好以后再进行hexo的安装，这个安装比较简单，新建目录hexo 执行 npm install hexo-cli g 安装完成以后再执行 npm install hexo –save 然后再执行 hexo -v 如果出现版本信息，就是安装好了。特别注意如果需要提交到github上面，一定要使用npm install hexo-deployer-git –save</p>

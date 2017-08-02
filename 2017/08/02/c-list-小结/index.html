@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/08/02/c-list-小结/index.html">
 <meta property="og:site_name" content="luckspring 的博客">
 <meta property="og:description" content="我自己本身原来是一枚嵌入式c工程师，基本上使用的都是c语言，用以编写驱动和应用程序，但是因后面工作需要，转向学习c++,本文也算是抛砖引玉，用以开始我的c++学习之路。 关于list容器　　list 是一种序列式容器，list容器完成的功能其实与数据结构中的双向链表特别相似。list中的数据元素是通过链表指针串成实际的线性表，也就是说其实list具有链表的快速插入和删除功能。list的实现是这">
-<meta property="og:updated_time" content="2017-08-02T08:19:55.339Z">
+<meta property="og:updated_time" content="2017-08-02T10:09:05.525Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c++学习之路 list 容器">
 <meta name="twitter:description" content="我自己本身原来是一枚嵌入式c工程师，基本上使用的都是c语言，用以编写驱动和应用程序，但是因后面工作需要，转向学习c++,本文也算是抛砖引玉，用以开始我的c++学习之路。 关于list容器　　list 是一种序列式容器，list容器完成的功能其实与数据结构中的双向链表特别相似。list中的数据元素是通过链表指针串成实际的线性表，也就是说其实list具有链表的快速插入和删除功能。list的实现是这">
@@ -175,7 +175,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>　　我自己本身原来是一枚嵌入式c工程师，基本上使用的都是c语言，用以编写驱动和应用程序，但是因后面工作需要，转向学习c++,本文也算是抛砖引玉，用以开始我的c++学习之路。</p>
-<h2 id="关于list容器"><a href="#关于list容器" class="headerlink" title="关于list容器"></a>关于list容器</h2><p>　　list 是一种序列式容器，list容器完成的功能其实与数据结构中的双向链表特别相似。list中的数据元素是通过链表指针串成实际的线性表，也就是说其实list具有链表的快速插入和删除功能。list的实现是这样的，list具有一个头域指针，一个数据域和一个尾域指针。头域指针保存了前一个元素的地址，尾域指指针保存了下一个元素的地址。还有一点，list容器和双向循环列表特别类似，即头结点的头域指针存储的是尾结点的地址，尾结点的尾域指针存储的是头结点的地址。由于list结点并不要求存储在连续的内存地址中，因此只能++或者–，而不能进行+n和-n这种快速存取。</p>
+<h2 id="关于list容器"><a href="#关于list容器" class="headerlink" title="关于list容器"></a>关于list容器</h2><p>　　list 是一种序列式容器，list容器完成的功能其实与数据结构中的双向链表特别相似。list中的数据元素是通过链表指针串成实际的线性表，也就是说其实list具有链表的快速插入和删除功能。list的实现是这样的，list具有一个头域指针，一个数据域和一个尾域指针。头域指针保存了前一个元素的地址，尾域指指针保存了下一个元素的地址。还有一点，list容器和双向循环列表特别类似，即头结点的头域指针存储的是尾结点的地址，尾结点的尾域指针存储的是头结点的地址。由于list结点并不要求存储在连续的内存地址中，因此只能++或者–，而不能进行+n和-n这种快速存取。<br><a id="more"></a></p>
 <h2 id="vector-list-deque-比较"><a href="#vector-list-deque-比较" class="headerlink" title="vector list deque 比较"></a>vector list deque 比较</h2><p>　　vector：和数组类似，拥有一段连续的内存空间，能够非常好的支持随机存取，即[]操作符，但是由于内存空间是连续的，所以在中间进行插入和删除时会造成内存块的拷贝，另外，当插入较多的元素后，预留的空间可能不足，需要重新申请一块足够大的内存并把原来的数据进行拷贝，会影响他的执行效率。<br>　　list： list其实就是数据结构中的双向链表，因此他的内存空间是不连续的，使用指针来进行数据访问，但是这个特点使其随即存储变得非常没有效率，因为其并没有提供[]的重载，但同时它包含了链表的特点，即可以在任意地方进行删除和插入。<br>　　deque： deque是一个double-ended queue，它的具体实现不太清楚，但知道它具有以下两个特点：它支持[]操作符，也就是支持随即存取，并且和vector的效率相差无几，它支持在两端的操作：push_back,push_front,pop_back,pop_front等，并且在两端操作上与list的效率也差不多。<br>　　在使用中的选择：  </p>
 <pre><code>1. 如果你需要高效的随即存取，而不在乎插入和删除的效率，使用vector  
 2.  如果你需要大量的插入和删除，而不关心随即存取，则应使用list  
