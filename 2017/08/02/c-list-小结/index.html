@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 学习 | luckspring 的博客</title>
+  <title>c++学习之路 list 容器 | luckspring 的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="华中科技大学10级 自动化汉子一枚 擅长 linux 嵌入式软件 此为博客一枚">
-<meta property="og:type" content="website">
-<meta property="og:title" content="luckspring 的博客">
-<meta property="og:url" content="http://yoursite.com/tags/学习/index.html">
+  <meta name="description" content="我自己本身原来是一枚嵌入式c工程师，基本上使用的都是c语言，用以编写驱动和应用程序，但是因后面工作需要，转向学习c++,本文也算是抛砖引玉，用以开始我的c++学习之路。 关于list容器　　list 是一种序列式容器，list容器完成的功能其实与数据结构中的双向链表特别相似。list中的数据元素是通过链表指针串成实际的线性表，也就是说其实list具有链表的快速插入和删除功能。list的实现是这">
+<meta name="keywords" content="学习,c++,list">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c++学习之路 list 容器">
+<meta property="og:url" content="http://yoursite.com/2017/08/02/c-list-小结/index.html">
 <meta property="og:site_name" content="luckspring 的博客">
-<meta property="og:description" content="华中科技大学10级 自动化汉子一枚 擅长 linux 嵌入式软件 此为博客一枚">
+<meta property="og:description" content="我自己本身原来是一枚嵌入式c工程师，基本上使用的都是c语言，用以编写驱动和应用程序，但是因后面工作需要，转向学习c++,本文也算是抛砖引玉，用以开始我的c++学习之路。 关于list容器　　list 是一种序列式容器，list容器完成的功能其实与数据结构中的双向链表特别相似。list中的数据元素是通过链表指针串成实际的线性表，也就是说其实list具有链表的快速插入和删除功能。list的实现是这">
+<meta property="og:updated_time" content="2017-08-02T08:19:55.339Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="luckspring 的博客">
-<meta name="twitter:description" content="华中科技大学10级 自动化汉子一枚 擅长 linux 嵌入式软件 此为博客一枚">
+<meta name="twitter:title" content="c++学习之路 list 容器">
+<meta name="twitter:description" content="我自己本身原来是一枚嵌入式c工程师，基本上使用的都是c语言，用以编写驱动和应用程序，但是因后面工作需要，转向学习c++,本文也算是抛砖引玉，用以开始我的c++学习之路。 关于list容器　　list 是一种序列式容器，list容器完成的功能其实与数据结构中的双向链表特别相似。list中的数据元素是通过链表指针串成实际的线性表，也就是说其实list具有链表的快速插入和删除功能。list的实现是这">
   
     <link rel="alternative" href="/atom.xml" title="luckspring 的博客" type="application/atom+xml">
   
@@ -152,78 +154,85 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-c-list-小结" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/02/markdown-使用技巧汇总/" class="archive-article-date">
-  	<time datetime="2017-08-02T07:04:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-02</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/02/markdown-使用技巧汇总/">markdown 使用技巧汇总</a>
+    <h1 class="article-title" itemprop="name">
+      c++学习之路 list 容器
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">杂谈</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/02/c-list-小结/" class="archive-article-date">
+        
+        <a href="/2017/08/02/c-list-小结/" class="archive-article-date">
   	<time datetime="2017-08-02T06:23:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-02</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/02/c-list-小结/">c++学习之路 list 容器</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　我自己本身原来是一枚嵌入式c工程师，基本上使用的都是c语言，用以编写驱动和应用程序，但是因后面工作需要，转向学习c++,本文也算是抛砖引玉，用以开始我的c++学习之路。</p>
+<h2 id="关于list容器"><a href="#关于list容器" class="headerlink" title="关于list容器"></a>关于list容器</h2><p>　　list 是一种序列式容器，list容器完成的功能其实与数据结构中的双向链表特别相似。list中的数据元素是通过链表指针串成实际的线性表，也就是说其实list具有链表的快速插入和删除功能。list的实现是这样的，list具有一个头域指针，一个数据域和一个尾域指针。头域指针保存了前一个元素的地址，尾域指指针保存了下一个元素的地址。还有一点，list容器和双向循环列表特别类似，即头结点的头域指针存储的是尾结点的地址，尾结点的尾域指针存储的是头结点的地址。由于list结点并不要求存储在连续的内存地址中，因此只能++或者–，而不能进行+n和-n这种快速存取。</p>
+<h2 id="vector-list-deque-比较"><a href="#vector-list-deque-比较" class="headerlink" title="vector list deque 比较"></a>vector list deque 比较</h2><p>　　vector：和数组类似，拥有一段连续的内存空间，能够非常好的支持随机存取，即[]操作符，但是由于内存空间是连续的，所以在中间进行插入和删除时会造成内存块的拷贝，另外，当插入较多的元素后，预留的空间可能不足，需要重新申请一块足够大的内存并把原来的数据进行拷贝，会影响他的执行效率。<br>　　list： list其实就是数据结构中的双向链表，因此他的内存空间是不连续的，使用指针来进行数据访问，但是这个特点使其随即存储变得非常没有效率，因为其并没有提供[]的重载，但同时它包含了链表的特点，即可以在任意地方进行删除和插入。<br>　　deque： deque是一个double-ended queue，它的具体实现不太清楚，但知道它具有以下两个特点：它支持[]操作符，也就是支持随即存取，并且和vector的效率相差无几，它支持在两端的操作：push_back,push_front,pop_back,pop_front等，并且在两端操作上与list的效率也差不多。<br>　　在使用中的选择：  </p>
+<pre><code>1. 如果你需要高效的随即存取，而不在乎插入和删除的效率，使用vector  
+2.  如果你需要大量的插入和删除，而不关心随即存取，则应使用list  
+3.  如果你需要随即存取，而且关心两端数据的插入和删除，则应使用deque
+</code></pre><h2 id="list中的常用函数"><a href="#list中的常用函数" class="headerlink" title="list中的常用函数"></a>list中的常用函数</h2><h3 id="list中的构造函数"><a href="#list中的构造函数" class="headerlink" title="list中的构造函数"></a>list中的构造函数</h3><p>　　list() 声明一个空列表；<br>　　list(n) 声明一个有n个元素的列表，每个元素都是由其默认构造函数T()构造出来的<br>　　ｌist(n,val) 声明一个由n个元素的列表，每个元素都是由其复制构造函数T(val)得来的<br>　　list(n,val) 声明一个和上面一样的列表<br>　　list(first,last) 声明一个列表，其元素的初始值来源于由区间所指定的序列中的元素  </p>
+<h3 id="begin-和end"><a href="#begin-和end" class="headerlink" title="begin() 和end()"></a>begin() 和end()</h3><p>　　通过调用list容器的成员函数begin()得到一个指向容器起始位置的iterator，可以调用list容器的 end() 函数来得到list末端下一位置，相当于：int a[n]中的第n+1个位置a[n]，实际上是不存在的，不能访问，经常作为循环结束判断结束条件使用。</p>
+<h3 id="push-back-和push-front"><a href="#push-back-和push-front" class="headerlink" title="push_back()和push_front()"></a>push_back()和push_front()</h3><p>　　使用list的成员函数push_back和push_front插入一个元素到list中。其中push_back()从list的末端插入，而 push_front()实现的从list的头部插入。</p>
+<h3 id="empty"><a href="#empty" class="headerlink" title="empty()"></a>empty()</h3><p>　　利用empty() 判断list是否为空。</p>
+<h3 id="resize"><a href="#resize" class="headerlink" title="resize()"></a>resize()</h3><p>　　如果调用resize(n)将list的长度改为只容纳n个元素，超出的元素将被删除，如果需要扩展那么调用默认构造函数T()将元素加到list末端。如果调用resize(n,val)，则扩展元素要调用构造函数T(val)函数进行元素构造，其余部分相同。</p>
+<h3 id="clear"><a href="#clear" class="headerlink" title="clear()"></a>clear()</h3><p>　　清空list中的所有元素。</p>
+<h3 id="front-和back"><a href="#front-和back" class="headerlink" title="front()和back()"></a>front()和back()</h3><p>　　通过front()可以获得list容器中的头部元素，通过back()可以获得list容器的最后一个元素。但是有一点要注意，就是list中元素是空的时候，这时候调用front()和back()会发生什么呢？实际上会发生不能正常读取数据的情况，但是这并不报错，那我们编程序时就要注意了，个人觉得在使用之前最好先调用empty()函数判断list是否为空</p>
+<h3 id="pop-back-和pop-front"><a href="#pop-back-和pop-front" class="headerlink" title="pop_back()和pop_front()"></a>pop_back()和pop_front()</h3><p>　　通过pop_back()删除最后一个元素，通过pop_front()删除第一个元素；序列必须不为空，如果当list为空的时候调用pop_back()和pop_front()会使程序崩掉。</p>
+<h3 id="assign"><a href="#assign" class="headerlink" title="assign()"></a>assign()</h3><p>　　1. l1.assign(n,val)： 将 l1中元素变为n个T(val）。<br>　　2. l1.assign(l2.begin(),l2.end()) ： 将l2中的从l2.begin()到l2.end()之间的数值赋值给l1</p>
+<h3 id="swap"><a href="#swap" class="headerlink" title="swap()"></a>swap()</h3><p>　　交换两个链表(两个重载)，一个是l1.swap(l2); 另外一个是swap(l1,l2)，都可能完成连个链表的交换。</p>
+<h3 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h3><p>　　通过reverse 实现list的逆序</p>
+<h3 id="merger"><a href="#merger" class="headerlink" title="merger()"></a>merger()</h3><p>　　合并两个链表并使之默认升序(也可改)，l1.merge(l2，greater<int>()); 调用结束后l2变为空，l1中元素包含原来l1 和 l2中的元素，并且排好序，升序。其实默认是升序，greater<int>()可以省略，另外greater<int>()是可以变的，也可以不按升序排列。</int></int></int></p>
+<h3 id="insert"><a href="#insert" class="headerlink" title="insert()"></a>insert()</h3><p>　　在指定位置插入一个或者多个元素 (三个重载)<br>　　1. l1.insert(l1.begin(),100); 在l1的开始位置插入100。<br>　　2. l1.insert(l1.begin(),2,200); 在l1的开始位置插入2个100。<br>　　3. l1.insert(l1.begin(),l2.begin(),l2.end());在l1的开始位置插入l2的从开始到结束的所有位置的元素。</p>
+<h3 id="erase"><a href="#erase" class="headerlink" title="erase()"></a>erase()</h3><p>　　删除一个元素或一个区域的元素(两个重载)<br>　　1. 1.erase(l1.begin()); 将l1的第一个元素删除。<br>　　2. l1.erase(l1.begin(),l1.end()); 将l1的从begin()到end()之间的元素删除。</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢你对我的支持，好人一生平安<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -243,141 +252,113 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/08/02/c-list-小结/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/31/ubuntu-start/" class="archive-article-date">
-  	<time datetime="2017-07-31T06:51:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-31</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2017/08/02/markdown-使用技巧汇总/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          markdown 使用技巧汇总
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/07/31/ubuntu-start/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ubuntu 无法进入图形化界面</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/31/ubuntu-start/">ubuntu 无法进入图形化界面</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/27/about-hexo-and-github/" class="archive-article-date">
-  	<time datetime="2017-07-27T07:18:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/27/about-hexo-and-github/">hexo和github 的一些问题说明</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">杂谈</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/27/hello-world/" class="archive-article-date">
-  	<time datetime="2017-07-27T03:41:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/27/hello-world/">初始 入坑之路</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">杂谈</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -400,9 +381,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: undefined,
 		toc_hide_index: true,
