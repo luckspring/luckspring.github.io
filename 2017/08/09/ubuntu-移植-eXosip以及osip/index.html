@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: c++ | luckspring 的博客</title>
+  <title>在linux下移植eXosip2以及osip2 | luckspring 的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="华中科技大学10级 自动化汉子一枚 擅长 linux 嵌入式软件 此为博客一枚">
-<meta property="og:type" content="website">
-<meta property="og:title" content="luckspring 的博客">
-<meta property="og:url" content="http://yoursite.com/tags/c/index.html">
+  <meta name="description" content="最近在学习关于sip的东西，看了很多文章，为了提供对gb28181的技术支持，决定在Ubuntu里面进行移植eXosip2和osip2。   安装包下载　　osip2 安装包的下载地址在这里:　　下载链接  这个链接我试了下，可以用，不过建议翻墙可能速度快一些，我下载的版本是5.0.0。读者可根据自己的需要自行下载。　　　　eXosip2的安装包下载地址在这里：　　下载链接 我编写这篇文章的">
+<meta name="keywords" content="学习,sip">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在linux下移植eXosip2以及osip2">
+<meta property="og:url" content="http://yoursite.com/2017/08/09/ubuntu-移植-eXosip以及osip/index.html">
 <meta property="og:site_name" content="luckspring 的博客">
-<meta property="og:description" content="华中科技大学10级 自动化汉子一枚 擅长 linux 嵌入式软件 此为博客一枚">
+<meta property="og:description" content="最近在学习关于sip的东西，看了很多文章，为了提供对gb28181的技术支持，决定在Ubuntu里面进行移植eXosip2和osip2。   安装包下载　　osip2 安装包的下载地址在这里:　　下载链接  这个链接我试了下，可以用，不过建议翻墙可能速度快一些，我下载的版本是5.0.0。读者可根据自己的需要自行下载。　　　　eXosip2的安装包下载地址在这里：　　下载链接 我编写这篇文章的">
+<meta property="og:updated_time" content="2017-08-09T09:08:46.453Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="luckspring 的博客">
-<meta name="twitter:description" content="华中科技大学10级 自动化汉子一枚 擅长 linux 嵌入式软件 此为博客一枚">
+<meta name="twitter:title" content="在linux下移植eXosip2以及osip2">
+<meta name="twitter:description" content="最近在学习关于sip的东西，看了很多文章，为了提供对gb28181的技术支持，决定在Ubuntu里面进行移植eXosip2和osip2。   安装包下载　　osip2 安装包的下载地址在这里:　　下载链接  这个链接我试了下，可以用，不过建议翻墙可能速度快一些，我下载的版本是5.0.0。读者可根据自己的需要自行下载。　　　　eXosip2的安装包下载地址在这里：　　下载链接 我编写这篇文章的">
   
     <link rel="alternative" href="/atom.xml" title="luckspring 的博客" type="application/atom+xml">
   
@@ -152,36 +154,259 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-ubuntu-移植-eXosip以及osip" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/02/c-list-小结/" class="archive-article-date">
-  	<time datetime="2017-08-02T06:23:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-02</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/02/c-list-小结/">c++学习之路 list 容器</a>
+    <h1 class="article-title" itemprop="name">
+      在linux下移植eXosip2以及osip2
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/08/09/ubuntu-移植-eXosip以及osip/" class="archive-article-date">
+  	<time datetime="2017-08-09T08:03:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　　最近在学习关于sip的东西，看了很多文章，为了提供对gb28181的技术支持，决定在Ubuntu里面进行移植eXosip2和osip2。  </p>
+<h2 id="安装包下载"><a href="#安装包下载" class="headerlink" title="安装包下载"></a>安装包下载</h2><p>　　osip2 安装包的下载地址在这里:<br>　　<a href="http://www.gnu.org/software/osip/" target="_blank" rel="external">下载链接</a>  这个链接我试了下，可以用，不过建议翻墙可能速度快一些，我下载的版本是5.0.0。读者可根据自己的需要自行下载。<br>　　<br>　　eXosip2的安装包下载地址在这里：<br>　　<a href="http://savannah.nongnu.org/projects/exosip/" target="_blank" rel="external">下载链接</a> 我编写这篇文章的时候是还可以用的，不过下载特别慢，虽然文件不大。</p>
+<h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2><p>　　安装osip2：<br>　　tar -xvzf libosip2-5.0.0.tar.gz<br>　　cd libosip2-5.0.0<br>　　./configure –prefix=/workspace/osip-lib gcc=cc<br>　　make<br>　　make install<br>　　安装eXosip2:<br>　　tar -xvzf libexosip2-5.0.0.tar.gz<br>　　cd libexosip2-5.0.0<br>　　./configure –prefix=/workspace/osip-lib gcc=cc<br>　　make<br>　　make install<br>　　在上面中一定要注意，最后安装的目录一定要保持一直，不然会导致eXosip2安装不成功。<br><a id="more"></a>  </p>
+<h2 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h2><p>　  UAS的测试代码如下：  </p>
+<pre><code>//*******************UAS**************************************************//  
+
+#include &lt;eXosip2/eXosip.h&gt;  
+#include &lt;osip2/osip_mt.h&gt;  
+#include &lt;stdio.h&gt;  
+#include &lt;stdlib.h&gt;  
+#include &lt;netinet/in.h&gt;  
+#include &lt;sys/socket.h&gt;  
+#include &lt;sys/types.h&gt; 
+#include &lt;sys/time.h&gt;
+#include &lt;netinet/in.h&gt;
+#include &lt;netinet/ip.h&gt;
+#include &lt;pthread.h&gt;
+#include &lt;string.h&gt; 
+
+int  
+main (int argc, char *argv[])  
+{  
+ eXosip_event_t *je = NULL;  
+ osip_message_t *ack = NULL;  
+ osip_message_t *invite = NULL;  
+ osip_message_t *answer = NULL;  
+ sdp_message_t *remote_sdp = NULL;
+ struct eXosip_t* m_excontext;  
+
+ int call_id, dialog_id;  
+ int i,j;  
+ int id;  
+ char *sour_call = &quot;sip:133@192.168.0.133&quot;;  
+ char *dest_call = &quot;sip:140@192.168.0.140:5060&quot;;  
+
+ char command;  
+ char tmp[4096];  
+ char localip[128];  
+
+ int pos = 0;  
+ m_excontext = eXosip_malloc();  
+ //初始化sip  
+ i = eXosip_init (m_excontext);  
+ if (i != 0)  
+ {  
+    printf (&quot;Can&apos;t initialize eXosip!/n&quot;);  
+    return -1;  
+ }  
+ else  
+ {  
+    printf (&quot;eXosip_init successfully!/n&quot;);  
+ }  
+
+ i = eXosip_listen_addr (m_excontext,IPPROTO_UDP, NULL, 5060, AF_INET, 0);  
+ if (i != 0)  
+ {  
+    eXosip_quit (m_excontext);  
+    fprintf (stderr, &quot;eXosip_listen_addr error!/nCouldn&apos;t initialize transport layer!/n&quot;);  
+ }  
+
+ for(;;)  
+ {  
+    //侦听是否有消息到来  
+    je = eXosip_event_wait (m_excontext,0,50);   
+
+    //协议栈带有此语句,具体作用未知  
+    //  eXosip_lock (m_excontext);  
+    // eXosip_default_action (m_excontext,je);  
+    //  eXosip_automatic_refresh ();  
+    // eXosip_unlock (m_excontext);  
+
+  if (je == NULL)//没有接收到消息  
+       continue;  
+  // printf (&quot;the cid is %s, did is %s/n&quot;, je-&gt;did, je-&gt;cid);  
+  switch (je-&gt;type)  
+  {  
+     case EXOSIP_MESSAGE_NEW://新的消息到来  
+     printf (&quot; EXOSIP_MESSAGE_NEW!/n&quot;);  
+     if (MSG_IS_MESSAGE (je-&gt;request))//如果接受到的消息类型是MESSAGE  
+     {  
+       {  
+         osip_body_t *body;  
+         osip_message_get_body (je-&gt;request, 0, &amp;body);   
+         printf (&quot;I get the msg is: %s/n&quot;, body-&gt;body);  
+         //printf (&quot;the cid is %s, did is %s/n&quot;, je- &gt;did, je-&gt;cid);  
+       }  
+      //按照规则，需要回复200 OK信息  
+      eXosip_message_build_answer (m_excontext,je-&gt;tid, 200,&amp;answer);  
+      eXosip_message_send_answer (m_excontext,je-&gt;tid, 200,answer);  
+    }  
+    break;  
+  case EXOSIP_CALL_INVITE:  
+     //得到接收到消息的具体信息  
+      printf (&quot;Received a INVITE msg from %s:%s, UserName is %s, password is %s/n&quot;,je-&gt;request-&gt;req_uri-&gt;host,  
+      je-&gt;request-&gt;req_uri-&gt;port, je-&gt;request-&gt;req_uri-&gt;username, je-&gt;request-&gt;req_uri-&gt;password);  
+     //得到消息体,认为该消息就是SDP格式.  
+     remote_sdp = eXosip_get_remote_sdp (m_excontext,je-&gt;did);  
+     call_id = je-&gt;cid;  
+     dialog_id = je-&gt;did;  
+
+     eXosip_lock (m_excontext);  
+     eXosip_call_send_answer (m_excontext,je-&gt;tid, 180, NULL);  
+     i = eXosip_call_build_answer (m_excontext,je-&gt;tid, 200, &amp;answer);  
+     if (i != 0)  
+     {  
+        printf (&quot;This request msg is invalid!Cann&apos;t response!/n&quot;);  
+        eXosip_call_send_answer (m_excontext,je-&gt;tid, 400, NULL);  
+     }  
+    else  
+     {  
+        snprintf (tmp, 4096,  
+           &quot;v=0/r/n&quot;  
+           &quot;o=anonymous 0 0 IN IP4 0.0.0.0/r/n&quot;  
+           &quot;t=1 10/r/n&quot;  
+           &quot;a=username:rainfish/r/n&quot;  
+           &quot;a=password:123/r/n&quot;);  
+
+      //设置回复的SDP消息体,下一步计划分析消息体  
+      //没有分析消息体，直接回复原来的消息，这一块做的不好。  
+      osip_message_set_body (answer, tmp, strlen(tmp));  
+      osip_message_set_content_type (answer, &quot;application/sdp&quot;);  
+
+      eXosip_call_send_answer (m_excontext,je-&gt;tid, 200, answer);  
+      printf (&quot;send 200 over!/n&quot;);  
+    }  
+    eXosip_unlock (m_excontext);  
+
+    //显示出在sdp消息体中的 attribute 的内容,里面计划存放我们的信息  
+    printf (&quot;the INFO is :/n&quot;);  
+    while (!osip_list_eol (&amp;remote_sdp-&gt;a_attributes, pos))  
+    {  
+      sdp_attribute_t *at;  
+
+      at = (sdp_attribute_t *) osip_list_get (&amp;remote_sdp-&gt;a_attributes, pos);  
+      printf (&quot;%s : %s/n&quot;, at-&gt;a_att_field, at-&gt;a_att_value);//这里解释了为什么在SDP消息体中属性a里面存放必须是两列   
+
+      pos ++;  
+    }  
+    break;  
+  case EXOSIP_CALL_ACK:  
+     printf (&quot;ACK recieved!/n&quot;);  
+     // printf (&quot;the cid is %s, did is %s/n&quot;, je-&gt;did, je-&gt;cid);   
+     break;  
+  case EXOSIP_CALL_CLOSED:  
+     printf (&quot;the remote hold the session!/n&quot;);  
+     // eXosip_call_build_ack(dialog_id, &amp;ack);  
+     //eXosip_call_send_ack(dialog_id, ack);   
+     i = eXosip_call_build_answer (m_excontext,je-&gt;tid, 200, &amp;answer);  
+     if (i != 0)  
+      {  
+         printf (&quot;This request msg is invalid!Cann&apos;t  response!/n&quot;);  
+         eXosip_call_send_answer (m_excontext,je-&gt;tid, 400, NULL);  
+
+      }  
+     else  
+     {  
+        eXosip_call_send_answer (m_excontext,je-&gt;tid, 200, answer);  
+        printf (&quot;bye send 200 over!/n&quot;);  
+     }          
+     break;  
+
+  case EXOSIP_CALL_MESSAGE_NEW://至于该类型和EXOSIP_MESSAGE_NEW的区别，源代码这么解释的  
+    /* 
+      /* request related events within calls (except INVITE) */  
+      EXOSIP_CALL_MESSAGE_NEW,            /**&lt; announce new incoming request. */  
+      /* response received for request outside calls */  
+      EXOSIP_MESSAGE_NEW,            /**&lt; announce new incoming request. */  
+      /*      我也不是很明白，理解是： EXOSIP_CALL_MESSAGE_NEW是一个呼叫中的新的消息到来，比如ring trying都算，所以在接受到后必须判断  
+        该消息类型，EXOSIP_MESSAGE_NEW而是表示不是呼叫内的消息到来。  
+        该解释有不妥地方，仅供参考。  
+      */  
+     printf(&quot; EXOSIP_CALL_MESSAGE_NEW/n&quot;);  
+     if (MSG_IS_INFO(je-&gt;request))//如果传输的是INFO方法  
+     {  
+          eXosip_lock (m_excontext);  
+          i = eXosip_call_build_answer (m_excontext,je-&gt;tid, 200, &amp;answer);  
+          if (i == 0)  
+          {  
+                eXosip_call_send_answer (m_excontext,je-&gt;tid, 200, answer);  
+          }  
+          eXosip_unlock (m_excontext);  
+          {  
+            osip_body_t *body;  
+            osip_message_get_body (je-&gt;request, 0, &amp;body);  
+            printf (&quot;the body is %s/n&quot;, body-&gt;body);  
+          }  
+     }  
+      break;   
+  default:  
+    printf (&quot;Could not parse the msg!/n&quot;);  
+  }  
+ }  
+}  
+</code></pre><p>　　在编译上述代码的过程中，遇到了各种各样的问题主要列举如下：<br>　　1. 编译过程中找到不到osip的各种函数，请添加<code>-leXosip2  -losip2  -losipparser2</code><br>　　2. 编译过程中找不到各种ssl的函数，请添加<code>-lssl</code><br>　　3. 编译过程中找不到各种ares函数，请添加<code>-lares</code><br>　　4. 编译过程中找不到pthread函数，请添加<code>-lpthread</code>　</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢你对我的支持，好人一生平安<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,29 +416,110 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">list</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">sip</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/08/09/ubuntu-移植-eXosip以及osip/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/08/02/markdown-使用技巧汇总/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">markdown 使用技巧汇总</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -236,9 +542,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: undefined,
 		toc_hide_index: true,
