@@ -154,6 +154,168 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-c-list-小结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/02/c-list-小结/">c++学习之路 list 容器</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/02/c-list-小结/" class="archive-article-date">
+  	<time datetime="2017-08-02T06:23:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　我自己本身原来是一枚嵌入式c工程师，基本上使用的都是c语言，用以编写驱动和应用程序，但是因后面工作需要，转向学习c++,本文也算是抛砖引玉，用以开始我的c++学习之路。</p>
+<h2 id="关于list容器"><a href="#关于list容器" class="headerlink" title="关于list容器"></a>关于list容器</h2><p>　　list 是一种序列式容器，list容器完成的功能其实与数据结构中的双向链表特别相似。list中的数据元素是通过链表指针串成实际的线性表，也就是说其实list具有链表的快速插入和删除功能。list的实现是这样的，list具有一个头域指针，一个数据域和一个尾域指针。头域指针保存了前一个元素的地址，尾域指指针保存了下一个元素的地址。还有一点，list容器和双向循环列表特别类似，即头结点的头域指针存储的是尾结点的地址，尾结点的尾域指针存储的是头结点的地址。由于list结点并不要求存储在连续的内存地址中，因此只能++或者–，而不能进行+n和-n这种快速存取。<br>
+        
+          <a class="article-more-a" href="/2017/08/02/c-list-小结/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">list</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/02/c-list-小结/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ubuntu-start" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/31/ubuntu-start/">ubuntu 无法进入图形化界面</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/31/ubuntu-start/" class="archive-article-date">
+  	<time datetime="2017-07-31T06:51:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　在使用ubuntu的过程中遇到过各种各样的问题，这篇博客博文只是简略的介绍最常见的一种情况。</p>
+<h2 id="详细情况"><a href="#详细情况" class="headerlink" title="详细情况"></a>详细情况</h2><p>　　我出现这个问题是在vitural box中安装了14.04，一般来说是不会出现什么问题，但是如果中途更换过源list,升级过软件之后，总会出现这样那样的问题，一般来说就是重新启动以后，系统没有进入图形界面，而是直接进入了字符界面。<br>　　我个人的解决办法是这样的，字符界面先登录，登录成功以后输入：sudo /etc/init.d/lightdm restart 重启后就进入了图形化界面了。<br>
+        
+          <a class="article-more-a" href="/2017/07/31/ubuntu-start/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/31/ubuntu-start/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-about-hexo-and-github" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -435,6 +597,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">感悟</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">视频格式</a>
               </li>
             
             <div class="clearfix"></div>
