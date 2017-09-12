@@ -154,6 +154,175 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-const用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/12/const用法/">const用法</a>
+    </h1>
+  
+
+        
+        <a href="/2017/09/12/const用法/" class="archive-article-date">
+  	<time datetime="2017-09-12T05:55:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　const 作为c++的一个重要修饰符，相对于c语言有了更加丰富的功能，下面列举一下c++中const的用法。</p>
+<h2 id="const-常见用法"><a href="#const-常见用法" class="headerlink" title="const 常见用法"></a>const 常见用法</h2><h3 id="const-修饰变量"><a href="#const-修饰变量" class="headerlink" title="const 修饰变量"></a>const 修饰变量</h3><p>　　<code>const int a</code> 表示a为常量，不可更改<br>　　<code>const int *a</code>表示a指向的内容为常量，不允许修改，但是可以修改指针的值。<br>　　<code>int const *a</code>表示a指向的内容为常量，不允许修改，但是可以修改指针的值。<br>　　<code>int *const a</code>表示指针为常量，不允许修改，但是可以修改指向的内容。<br>　　<code>const int * const a</code>表示两者为常量，均不允许修改。</p>
+<h3 id="const修饰函数参数"><a href="#const修饰函数参数" class="headerlink" title="const修饰函数参数"></a>const修饰函数参数</h3><p>　　首先需要说明的是const只能修饰函数的输入参数，不能修饰函数的输出参数，如果输入参数采用的是 指针传递参数，那么加入const可以防止意外的修改到参数，起到保护作用。<br>　　对于非内部数据类型的输入参数，应该将“值传递”的方式改为“const引用传递”，目的是提高效率。例如将void Func(A a) 改为void Func(const A &amp;a)</p>
+<h3 id="用const修饰函数的返回值"><a href="#用const修饰函数的返回值" class="headerlink" title="用const修饰函数的返回值"></a>用const修饰函数的返回值</h3><p>　　如果给以“指针传递”方式的函数返回值加const修饰，那么函数返回值（即指针）的内容不能被修改，该返回值只能被赋给加const修饰的同类型指针。例如函数const char <em> GetString(void);如下语句将出现编译错误：char</em>str = GetString();正确的用法是const char *str =GetString();  </p>
+<h3 id="const-成员函数"><a href="#const-成员函数" class="headerlink" title="const 成员函数"></a>const 成员函数</h3><p>　　任何不会修改数据成员的函数都应该声明为const类型。如果在编写const成员函数时，不慎修改了数据成员，或者调用了其它非const成员函数，编译器将指出错误，这无疑会提高程序的健壮性。<br>　　关于Const函数的几点规则：<br>　　a.const对象只能访问const成员函数,而非const对象可以访问任意的成员函数,包括const成员函数.<br>　　b.const对象的成员是不可修改的,然而const对象通过指针维护的对象却是可以修改的.<br>　　c.const成员函数不可以修改对象的数据,不管对象是否具有const性质.它在编译时,以是否修改成员数据为依据,进行检查.<br>　　e.然而加上mutable修饰符的数据成员,对于任何情况下通过任何手段都可修改,自然此时的const成员函数是可以修改它的</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">const</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/09/12/const用法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-boost-智能指针详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/31/boost-智能指针详解/">boost 智能指针详解</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/31/boost-智能指针详解/" class="archive-article-date">
+  	<time datetime="2017-08-31T09:35:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　本文是针对在学习c++的boost库的时候遇到的问题进行的详解，因为都是学习的资料，可能有些资料不够详尽，见谅。<br>　　计算机系统中资源有很多种，其中内存是我们最常用到的，此外还有socket,文件描述符，操作系统handle,数据库连接等，程序中申请这些资源后必须及时归还系统，否则容易导致不可预知的错误。</p>
+<h2 id="BOOST-AUTO-PTR"><a href="#BOOST-AUTO-PTR" class="headerlink" title="BOOST AUTO_PTR"></a>BOOST AUTO_PTR</h2><p>　　由于程序运行过程中随时可能出现异常，c++最常见的问题就体现在如果在构造函数或者在某一模块的起始处使用了new或者其他申请内存的操作，但是中途执行时出了异常，导致没用调用模块结束时的释放或者没有调用到析构函数，就会导致内存没有得到合理的释放。针对这个问题，c++引入了异常处理机制，而引入了异常处理机制，auto_ptr就是一种非常重要的技术。<br>　　auto_ptr 引入了六种比较有用的智能指正，分别是：scoped_ptr,scoped_array,shared_ptr,shared_array,weak_ptr和instrusive_ptr。</p>
+<h3 id="scoped-ptr"><a href="#scoped-ptr" class="headerlink" title="scoped_ptr"></a>scoped_ptr</h3><p>　　scoped_ptr 包装了new操作符在堆上分配的动态对象，能够保证动态创建的对象在任何时候都可以被正确的删除，但是scoped_ptr的所有权更加严格，不能转让，一旦scoped_ptr获得了对象的管理权限，就无法再取回来。<br>　　scoped_ptr的构造函数接受的是一个类型T*的指针p,创建出一个scoped_ptr对象，并在内部保存指针参数p,p必须是一个new表示还动态分配的结果，或者是一个空指针，当scoped_ptr对象的生命周期结束时，析构函数~scoped_ptr（）会使用delete操作符自动销毁所保存的指正，从而正确的回收资源。</p>
+<h4 id="操作函数"><a href="#操作函数" class="headerlink" title="操作函数"></a>操作函数</h4><p>　　scoped_ptr把拷贝构造函数和赋值都声明为私有，禁止对scoped_ptr的拷贝和赋值。<br>　　一般情况下，该指针不支持比较操作和reset()函数。<br>　　关键在于，scoped_ptr不支持从另外一个scoped_ptr处赋值，也就是说scoped_ptr <int> p1 ,p2  p1=p2是不合法的，无法通过编译。</int></p>
+<h3 id="scoped-array"><a href="#scoped-array" class="headerlink" title="scoped_array"></a>scoped_array</h3><p>　　scoped_array 和scoped_ptr的设计思路非常类似，只是scoped_array设计使用的是new[] 数组，而不是new,也就是说这个是专门用来管理数组的智能指针。不过因为其实一个裸的数据接口，同时不能动态增长，而且没有迭代器支持，一般推荐使用victore类。  </p>
+<h3 id="share-ptr"><a href="#share-ptr" class="headerlink" title="share_ptr"></a>share_ptr</h3><p>　　share_ptr是boost库中最像指针的智能指针，同时也是使用最多，用得最广泛的智能指针。<br>　　share_ptr同样包含了new操作符，但实现的是引用计数型，可以被自由的拷贝和赋值，可以在任意的地方共享，当没有程序使用时（也就是引用计数为0）才会被析构。它同样重载了*操作符和-&gt;操作符。<br>　　share_ptr几乎可以百分百出现在new分配动态内存的地方，从而消灭delete和内存泄漏。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">boost</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/31/boost-智能指针详解/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-视频格式h264和mp8对比" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -380,172 +549,9 @@
 
 
   
-    <article id="post-ubuntu-移植-eXosip以及osip" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/09/ubuntu-移植-eXosip以及osip/">在linux下移植eXosip2以及osip2</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/09/ubuntu-移植-eXosip以及osip/" class="archive-article-date">
-  	<time datetime="2017-08-09T08:03:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>　　　最近在学习关于sip的东西，看了很多文章，为了提供对gb28181的技术支持，决定在Ubuntu里面进行移植eXosip2和osip2。  </p>
-<h2 id="安装包下载"><a href="#安装包下载" class="headerlink" title="安装包下载"></a>安装包下载</h2><p>　　osip2 安装包的下载地址在这里:<br>　　<a href="http://www.gnu.org/software/osip/" target="_blank" rel="external">下载链接</a>  这个链接我试了下，可以用，不过建议翻墙可能速度快一些，我下载的版本是5.0.0。读者可根据自己的需要自行下载。<br>　　<br>　　eXosip2的安装包下载地址在这里：<br>　　<a href="http://savannah.nongnu.org/projects/exosip/" target="_blank" rel="external">下载链接</a> 我编写这篇文章的时候是还可以用的，不过下载特别慢，虽然文件不大。</p>
-<h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2><p>　　安装osip2：<br>　　tar -xvzf libosip2-5.0.0.tar.gz<br>　　cd libosip2-5.0.0<br>　　./configure –prefix=/workspace/osip-lib gcc=cc<br>　　make<br>　　make install<br>　　安装eXosip2:<br>　　tar -xvzf libexosip2-5.0.0.tar.gz<br>　　cd libexosip2-5.0.0<br>　　./configure –prefix=/workspace/osip-lib gcc=cc<br>　　make<br>　　make install<br>　　在上面中一定要注意，最后安装的目录一定要保持一直，不然会导致eXosip2安装不成功。<br>
-        
-          <a class="article-more-a" href="/2017/08/09/ubuntu-移植-eXosip以及osip/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">sip</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/09/ubuntu-移植-eXosip以及osip/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-markdown-使用技巧汇总" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/02/markdown-使用技巧汇总/">markdown 使用技巧汇总</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/02/markdown-使用技巧汇总/" class="archive-article-date">
-  	<time datetime="2017-08-02T07:04:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>　　在我把所有的博客环境搭建好以后，不可避免的就涉及到在本地怎么写博客，找了几款markdown编辑器，最后发现MarkdownPad2 比较好用，就决定使用这款，不可避免的，由于使用的是别人的模板，那么自己编写过程中肯定会遇到各种各样的问题，在这里就把遇到的问题以及我自己的解决办法写出来，仅供参考。  </p>
-<h2 id="遇到的问题及解决办法"><a href="#遇到的问题及解决办法" class="headerlink" title="遇到的问题及解决办法"></a>遇到的问题及解决办法</h2><p>　　1. 首行缩进 使用输入法全角符模式，连续两个空格即实现首行缩进。<br>　　2. 段落换行 在输入法半角模式下，连续两个空格外加一个enter回车即可实现。<br>　　3. tags 如果想在tags后面多加几条，首先在tags的冒号后面增加空格，然后回车，然后使用tab键，输入- 然后空格 输入第一个标签名，然后回车，自动出现缩进和-，空格然后输入第二个标签就可以了。<br>　　4. 有序列表，只要在数字后面加一个英文的句点即可实现。<br>　　5. 使用#表示标题，其中#表示一级标题，##表示二级标题，以此类推，总共有6级。在#后面要加空格，不然就会把#也当做标题的一部分。<br>　　6. 对于使用文章截断，则使用的是<code>&lt;!--more--&gt;</code>。<br>　　7. 插入图片的话是:使用类似<code>![](img/test.png)</code><br>　　8. 代码段区域的文字不会被处理，按照原样输出，代码段落可以使用四个空格键或者一个tab键实现，文字内代码标识使用的是`<code>your code</code>`实现的。<br>　　9. 插入链接 <code>[这是个链接]（www.baidu.com）</code><br>
-        
-          <a class="article-more-a" href="/2017/08/02/markdown-使用技巧汇总/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">杂谈</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/02/markdown-使用技巧汇总/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -648,7 +654,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">const</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">c++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">boost</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -656,11 +674,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sip</a>
+                <a href="javascript:void(0)" class="js-tag color3">感悟</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">感悟</a>
+                <a href="javascript:void(0)" class="js-tag color4">sip</a>
               </li>
              
               <li class="article-tag-list-item">

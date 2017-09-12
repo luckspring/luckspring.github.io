@@ -154,6 +154,169 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ubuntu-移植-eXosip以及osip" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/09/ubuntu-移植-eXosip以及osip/">在linux下移植eXosip2以及osip2</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/09/ubuntu-移植-eXosip以及osip/" class="archive-article-date">
+  	<time datetime="2017-08-09T08:03:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　　最近在学习关于sip的东西，看了很多文章，为了提供对gb28181的技术支持，决定在Ubuntu里面进行移植eXosip2和osip2。  </p>
+<h2 id="安装包下载"><a href="#安装包下载" class="headerlink" title="安装包下载"></a>安装包下载</h2><p>　　osip2 安装包的下载地址在这里:<br>　　<a href="http://www.gnu.org/software/osip/" target="_blank" rel="external">下载链接</a>  这个链接我试了下，可以用，不过建议翻墙可能速度快一些，我下载的版本是5.0.0。读者可根据自己的需要自行下载。<br>　　<br>　　eXosip2的安装包下载地址在这里：<br>　　<a href="http://savannah.nongnu.org/projects/exosip/" target="_blank" rel="external">下载链接</a> 我编写这篇文章的时候是还可以用的，不过下载特别慢，虽然文件不大。</p>
+<h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2><p>　　安装osip2：<br>　　tar -xvzf libosip2-5.0.0.tar.gz<br>　　cd libosip2-5.0.0<br>　　./configure –prefix=/workspace/osip-lib gcc=cc<br>　　make<br>　　make install<br>　　安装eXosip2:<br>　　tar -xvzf libexosip2-5.0.0.tar.gz<br>　　cd libexosip2-5.0.0<br>　　./configure –prefix=/workspace/osip-lib gcc=cc<br>　　make<br>　　make install<br>　　在上面中一定要注意，最后安装的目录一定要保持一直，不然会导致eXosip2安装不成功。<br>
+        
+          <a class="article-more-a" href="/2017/08/09/ubuntu-移植-eXosip以及osip/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">sip</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/09/ubuntu-移植-eXosip以及osip/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-markdown-使用技巧汇总" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/02/markdown-使用技巧汇总/">markdown 使用技巧汇总</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/02/markdown-使用技巧汇总/" class="archive-article-date">
+  	<time datetime="2017-08-02T07:04:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　在我把所有的博客环境搭建好以后，不可避免的就涉及到在本地怎么写博客，找了几款markdown编辑器，最后发现MarkdownPad2 比较好用，就决定使用这款，不可避免的，由于使用的是别人的模板，那么自己编写过程中肯定会遇到各种各样的问题，在这里就把遇到的问题以及我自己的解决办法写出来，仅供参考。  </p>
+<h2 id="遇到的问题及解决办法"><a href="#遇到的问题及解决办法" class="headerlink" title="遇到的问题及解决办法"></a>遇到的问题及解决办法</h2><p>　　1. 首行缩进 使用输入法全角符模式，连续两个空格即实现首行缩进。<br>　　2. 段落换行 在输入法半角模式下，连续两个空格外加一个enter回车即可实现。<br>　　3. tags 如果想在tags后面多加几条，首先在tags的冒号后面增加空格，然后回车，然后使用tab键，输入- 然后空格 输入第一个标签名，然后回车，自动出现缩进和-，空格然后输入第二个标签就可以了。<br>　　4. 有序列表，只要在数字后面加一个英文的句点即可实现。<br>　　5. 使用#表示标题，其中#表示一级标题，##表示二级标题，以此类推，总共有6级。在#后面要加空格，不然就会把#也当做标题的一部分。<br>　　6. 对于使用文章截断，则使用的是<code>&lt;!--more--&gt;</code>。<br>　　7. 插入图片的话是:使用类似<code>![](img/test.png)</code><br>　　8. 代码段区域的文字不会被处理，按照原样输出，代码段落可以使用四个空格键或者一个tab键实现，文字内代码标识使用的是`<code>your code</code>`实现的。<br>　　9. 插入链接 <code>[这是个链接]（www.baidu.com）</code><br>
+        
+          <a class="article-more-a" href="/2017/08/02/markdown-使用技巧汇总/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">杂谈</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/02/markdown-使用技巧汇总/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-c-list-小结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -246,7 +409,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/31/ubuntu-start/">ubuntu 无法进入图形化界面</a>
+      <a class="article-title" href="/2017/07/31/ubuntu-start/">ubuntu 常见问题解析</a>
     </h1>
   
 
@@ -397,91 +560,9 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/27/hello-world/">初始 入坑之路</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/27/hello-world/" class="archive-article-date">
-  	<time datetime="2017-07-27T03:41:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> 　　这是我的第一篇博客，也是我搭建博客的历程，作为初入博客的弱鸡，在搭建博客的过程中各种踩坑，总之是把所有能遇到的坑都遇到了一遍，此中心酸不足为外人道也。特写下这一边搭建的心路历程，聊以自慰。</p>
-<h2 id="搭建之路"><a href="#搭建之路" class="headerlink" title="搭建之路"></a>搭建之路</h2><h3 id="搭建原由"><a href="#搭建原由" class="headerlink" title="搭建原由"></a>搭建原由</h3><p>　　作为一个立志把程序猿一路走到黑的弱鸡，没有自己的博客怎么保留下学习之路呢，另外一方面也有装x的嫌疑在里面。但不可否认，有一个自己的博客专门用来保存自己所遇到的问题已经解决办法很有必要。</p>
-<p> 　　以前每次遇到问题，找到解决办法以后都是借助office工具来进行保存，但是在遇到问题多了以后，各种文档各种乱，而且不同电脑和不同地点还没有办法及时进行查找。也采用过使用u盘，但是又存在u盘丢失的风险，所以最终还是走上了搭建博客这条道路。<br>
-        
-          <a class="article-more-a" href="/2017/07/27/hello-world/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">杂谈</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/27/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
@@ -584,7 +665,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">const</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">c++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">boost</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -592,11 +685,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sip</a>
+                <a href="javascript:void(0)" class="js-tag color3">感悟</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">感悟</a>
+                <a href="javascript:void(0)" class="js-tag color4">sip</a>
               </li>
              
               <li class="article-tag-list-item">
