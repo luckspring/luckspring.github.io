@@ -6,19 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>boost 智能指针详解 | luckspring 的博客</title>
+  <title>Tag: linux | luckspring 的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文是针对在学习c++的boost库的时候遇到的问题进行的详解，因为都是学习的资料，可能有些资料不够详尽，见谅。　　计算机系统中资源有很多种，其中内存是我们最常用到的，此外还有socket,文件描述符，操作系统handle,数据库连接等，程序中申请这些资源后必须及时归还系统，否则容易导致不可预知的错误。 BOOST AUTO_PTR　　由于程序运行过程中随时可能出现异常，c++最常见的问题就体">
-<meta name="keywords" content="C++,boost">
-<meta property="og:type" content="article">
-<meta property="og:title" content="boost 智能指针详解">
-<meta property="og:url" content="http://yoursite.com/2017/08/31/boost-智能指针详解/index.html">
+  <meta name="description" content="华中科技大学10级 自动化汉子一枚 擅长 linux 嵌入式软件 此为博客一枚">
+<meta property="og:type" content="website">
+<meta property="og:title" content="luckspring 的博客">
+<meta property="og:url" content="http://yoursite.com/tags/linux/index.html">
 <meta property="og:site_name" content="luckspring 的博客">
-<meta property="og:description" content="本文是针对在学习c++的boost库的时候遇到的问题进行的详解，因为都是学习的资料，可能有些资料不够详尽，见谅。　　计算机系统中资源有很多种，其中内存是我们最常用到的，此外还有socket,文件描述符，操作系统handle,数据库连接等，程序中申请这些资源后必须及时归还系统，否则容易导致不可预知的错误。 BOOST AUTO_PTR　　由于程序运行过程中随时可能出现异常，c++最常见的问题就体">
-<meta property="og:updated_time" content="2017-09-01T02:09:38.421Z">
+<meta property="og:description" content="华中科技大学10级 自动化汉子一枚 擅长 linux 嵌入式软件 此为博客一枚">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="boost 智能指针详解">
-<meta name="twitter:description" content="本文是针对在学习c++的boost库的时候遇到的问题进行的详解，因为都是学习的资料，可能有些资料不够详尽，见谅。　　计算机系统中资源有很多种，其中内存是我们最常用到的，此外还有socket,文件描述符，操作系统handle,数据库连接等，程序中申请这些资源后必须及时归还系统，否则容易导致不可预知的错误。 BOOST AUTO_PTR　　由于程序运行过程中随时可能出现异常，c++最常见的问题就体">
+<meta name="twitter:title" content="luckspring 的博客">
+<meta name="twitter:description" content="华中科技大学10级 自动化汉子一枚 擅长 linux 嵌入式软件 此为博客一枚">
   
     <link rel="alternative" href="/atom.xml" title="luckspring 的博客" type="application/atom+xml">
   
@@ -154,193 +152,68 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-boost-智能指针详解" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      boost 智能指针详解
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/10/27/linux-编程小结/" class="archive-article-date">
+  	<time datetime="2017-10-27T08:17:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-27</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/10/27/linux-编程小结/">linux 编程小结</a>
     </h1>
   
 
-        
-        <a href="/2017/08/31/boost-智能指针详解/" class="archive-article-date">
-  	<time datetime="2017-08-31T09:35:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>　　本文是针对在学习c++的boost库的时候遇到的问题进行的详解，因为都是学习的资料，可能有些资料不够详尽，见谅。<br>　　计算机系统中资源有很多种，其中内存是我们最常用到的，此外还有socket,文件描述符，操作系统handle,数据库连接等，程序中申请这些资源后必须及时归还系统，否则容易导致不可预知的错误。</p>
-<h2 id="BOOST-AUTO-PTR"><a href="#BOOST-AUTO-PTR" class="headerlink" title="BOOST AUTO_PTR"></a>BOOST AUTO_PTR</h2><p>　　由于程序运行过程中随时可能出现异常，c++最常见的问题就体现在如果在构造函数或者在某一模块的起始处使用了new或者其他申请内存的操作，但是中途执行时出了异常，导致没用调用模块结束时的释放或者没有调用到析构函数，就会导致内存没有得到合理的释放。针对这个问题，c++引入了异常处理机制，而引入了异常处理机制，auto_ptr就是一种非常重要的技术。<br>　　auto_ptr 引入了六种比较有用的智能指正，分别是：scoped_ptr,scoped_array,shared_ptr,shared_array,weak_ptr和instrusive_ptr。</p>
-<h3 id="scoped-ptr"><a href="#scoped-ptr" class="headerlink" title="scoped_ptr"></a>scoped_ptr</h3><p>　　scoped_ptr 包装了new操作符在堆上分配的动态对象，能够保证动态创建的对象在任何时候都可以被正确的删除，但是scoped_ptr的所有权更加严格，不能转让，一旦scoped_ptr获得了对象的管理权限，就无法再取回来。<br>　　scoped_ptr的构造函数接受的是一个类型T*的指针p,创建出一个scoped_ptr对象，并在内部保存指针参数p,p必须是一个new表示还动态分配的结果，或者是一个空指针，当scoped_ptr对象的生命周期结束时，析构函数~scoped_ptr（）会使用delete操作符自动销毁所保存的指正，从而正确的回收资源。</p>
-<h4 id="操作函数"><a href="#操作函数" class="headerlink" title="操作函数"></a>操作函数</h4><p>　　scoped_ptr把拷贝构造函数和赋值都声明为私有，禁止对scoped_ptr的拷贝和赋值。<br>　　一般情况下，该指针不支持比较操作和reset()函数。<br>　　关键在于，scoped_ptr不支持从另外一个scoped_ptr处赋值，也就是说scoped_ptr <int> p1 ,p2  p1=p2是不合法的，无法通过编译。</int></p>
-<h3 id="scoped-array"><a href="#scoped-array" class="headerlink" title="scoped_array"></a>scoped_array</h3><p>　　scoped_array 和scoped_ptr的设计思路非常类似，只是scoped_array设计使用的是new[] 数组，而不是new,也就是说这个是专门用来管理数组的智能指针。不过因为其实一个裸的数据接口，同时不能动态增长，而且没有迭代器支持，一般推荐使用victore类。  </p>
-<h3 id="share-ptr"><a href="#share-ptr" class="headerlink" title="share_ptr"></a>share_ptr</h3><p>　　share_ptr是boost库中最像指针的智能指针，同时也是使用最多，用得最广泛的智能指针。<br>　　share_ptr同样包含了new操作符，但实现的是引用计数型，可以被自由的拷贝和赋值，可以在任意的地方共享，当没有程序使用时（也就是引用计数为0）才会被析构。它同样重载了*操作符和-&gt;操作符。<br>　　share_ptr几乎可以百分百出现在new分配动态内存的地方，从而消灭delete和内存泄漏。</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢你对我的支持，好人一生平安<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/alipay.png">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/weixin.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">boost</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/08/31/boost-智能指针详解/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/09/12/const用法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          const用法
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/08/30/视频格式h264和mp8对比/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">视频格式h264和mp8对比</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
+    
 
 
           </div>
@@ -363,9 +236,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: undefined,
 		toc_hide_index: true,

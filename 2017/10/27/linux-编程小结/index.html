@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>boost 智能指针详解 | luckspring 的博客</title>
+  <title>linux 编程小结 | luckspring 的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文是针对在学习c++的boost库的时候遇到的问题进行的详解，因为都是学习的资料，可能有些资料不够详尽，见谅。　　计算机系统中资源有很多种，其中内存是我们最常用到的，此外还有socket,文件描述符，操作系统handle,数据库连接等，程序中申请这些资源后必须及时归还系统，否则容易导致不可预知的错误。 BOOST AUTO_PTR　　由于程序运行过程中随时可能出现异常，c++最常见的问题就体">
-<meta name="keywords" content="C++,boost">
+  <meta name="description" content="这篇文章主要是对一些比较常用的linux上的编程方法进行总结，纯属个人总结，主要涉及到以下内容：     编译动态链接库 动态链接库加入系统路径    编译动态链接库　　在linux 下面编译动态库主要涉及到两步，首先是使用源文件编译为链接文件，然后再把链接文件编译为动态库即可。　　1. 编译源文件：需要加入-fPIC 作为编译选项　　2. 编译链接文件：需要加入-shared 作为链接选项">
+<meta name="keywords" content="学习,linux,C++">
 <meta property="og:type" content="article">
-<meta property="og:title" content="boost 智能指针详解">
-<meta property="og:url" content="http://yoursite.com/2017/08/31/boost-智能指针详解/index.html">
+<meta property="og:title" content="linux 编程小结">
+<meta property="og:url" content="http://yoursite.com/2017/10/27/linux-编程小结/index.html">
 <meta property="og:site_name" content="luckspring 的博客">
-<meta property="og:description" content="本文是针对在学习c++的boost库的时候遇到的问题进行的详解，因为都是学习的资料，可能有些资料不够详尽，见谅。　　计算机系统中资源有很多种，其中内存是我们最常用到的，此外还有socket,文件描述符，操作系统handle,数据库连接等，程序中申请这些资源后必须及时归还系统，否则容易导致不可预知的错误。 BOOST AUTO_PTR　　由于程序运行过程中随时可能出现异常，c++最常见的问题就体">
-<meta property="og:updated_time" content="2017-09-01T02:09:38.421Z">
+<meta property="og:description" content="这篇文章主要是对一些比较常用的linux上的编程方法进行总结，纯属个人总结，主要涉及到以下内容：     编译动态链接库 动态链接库加入系统路径    编译动态链接库　　在linux 下面编译动态库主要涉及到两步，首先是使用源文件编译为链接文件，然后再把链接文件编译为动态库即可。　　1. 编译源文件：需要加入-fPIC 作为编译选项　　2. 编译链接文件：需要加入-shared 作为链接选项">
+<meta property="og:updated_time" content="2017-10-27T08:50:12.766Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="boost 智能指针详解">
-<meta name="twitter:description" content="本文是针对在学习c++的boost库的时候遇到的问题进行的详解，因为都是学习的资料，可能有些资料不够详尽，见谅。　　计算机系统中资源有很多种，其中内存是我们最常用到的，此外还有socket,文件描述符，操作系统handle,数据库连接等，程序中申请这些资源后必须及时归还系统，否则容易导致不可预知的错误。 BOOST AUTO_PTR　　由于程序运行过程中随时可能出现异常，c++最常见的问题就体">
+<meta name="twitter:title" content="linux 编程小结">
+<meta name="twitter:description" content="这篇文章主要是对一些比较常用的linux上的编程方法进行总结，纯属个人总结，主要涉及到以下内容：     编译动态链接库 动态链接库加入系统路径    编译动态链接库　　在linux 下面编译动态库主要涉及到两步，首先是使用源文件编译为链接文件，然后再把链接文件编译为动态库即可。　　1. 编译源文件：需要加入-fPIC 作为编译选项　　2. 编译链接文件：需要加入-shared 作为链接选项">
   
     <link rel="alternative" href="/atom.xml" title="luckspring 的博客" type="application/atom+xml">
   
@@ -154,32 +154,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-boost-智能指针详解" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-linux-编程小结" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      boost 智能指针详解
+      linux 编程小结
     </h1>
   
 
         
-        <a href="/2017/08/31/boost-智能指针详解/" class="archive-article-date">
-  	<time datetime="2017-08-31T09:35:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-31</time>
+        <a href="/2017/10/27/linux-编程小结/" class="archive-article-date">
+  	<time datetime="2017-10-27T08:17:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　本文是针对在学习c++的boost库的时候遇到的问题进行的详解，因为都是学习的资料，可能有些资料不够详尽，见谅。<br>　　计算机系统中资源有很多种，其中内存是我们最常用到的，此外还有socket,文件描述符，操作系统handle,数据库连接等，程序中申请这些资源后必须及时归还系统，否则容易导致不可预知的错误。</p>
-<h2 id="BOOST-AUTO-PTR"><a href="#BOOST-AUTO-PTR" class="headerlink" title="BOOST AUTO_PTR"></a>BOOST AUTO_PTR</h2><p>　　由于程序运行过程中随时可能出现异常，c++最常见的问题就体现在如果在构造函数或者在某一模块的起始处使用了new或者其他申请内存的操作，但是中途执行时出了异常，导致没用调用模块结束时的释放或者没有调用到析构函数，就会导致内存没有得到合理的释放。针对这个问题，c++引入了异常处理机制，而引入了异常处理机制，auto_ptr就是一种非常重要的技术。<br>　　auto_ptr 引入了六种比较有用的智能指正，分别是：scoped_ptr,scoped_array,shared_ptr,shared_array,weak_ptr和instrusive_ptr。</p>
-<h3 id="scoped-ptr"><a href="#scoped-ptr" class="headerlink" title="scoped_ptr"></a>scoped_ptr</h3><p>　　scoped_ptr 包装了new操作符在堆上分配的动态对象，能够保证动态创建的对象在任何时候都可以被正确的删除，但是scoped_ptr的所有权更加严格，不能转让，一旦scoped_ptr获得了对象的管理权限，就无法再取回来。<br>　　scoped_ptr的构造函数接受的是一个类型T*的指针p,创建出一个scoped_ptr对象，并在内部保存指针参数p,p必须是一个new表示还动态分配的结果，或者是一个空指针，当scoped_ptr对象的生命周期结束时，析构函数~scoped_ptr（）会使用delete操作符自动销毁所保存的指正，从而正确的回收资源。</p>
-<h4 id="操作函数"><a href="#操作函数" class="headerlink" title="操作函数"></a>操作函数</h4><p>　　scoped_ptr把拷贝构造函数和赋值都声明为私有，禁止对scoped_ptr的拷贝和赋值。<br>　　一般情况下，该指针不支持比较操作和reset()函数。<br>　　关键在于，scoped_ptr不支持从另外一个scoped_ptr处赋值，也就是说scoped_ptr <int> p1 ,p2  p1=p2是不合法的，无法通过编译。</int></p>
-<h3 id="scoped-array"><a href="#scoped-array" class="headerlink" title="scoped_array"></a>scoped_array</h3><p>　　scoped_array 和scoped_ptr的设计思路非常类似，只是scoped_array设计使用的是new[] 数组，而不是new,也就是说这个是专门用来管理数组的智能指针。不过因为其实一个裸的数据接口，同时不能动态增长，而且没有迭代器支持，一般推荐使用victore类。  </p>
-<h3 id="share-ptr"><a href="#share-ptr" class="headerlink" title="share_ptr"></a>share_ptr</h3><p>　　share_ptr是boost库中最像指针的智能指针，同时也是使用最多，用得最广泛的智能指针。<br>　　share_ptr同样包含了new操作符，但实现的是引用计数型，可以被自由的拷贝和赋值，可以在任意的地方共享，当没有程序使用时（也就是引用计数为0）才会被析构。它同样重载了*操作符和-&gt;操作符。<br>　　share_ptr几乎可以百分百出现在new分配动态内存的地方，从而消灭delete和内存泄漏。</p>
+        <p>　　这篇文章主要是对一些比较常用的linux上的编程方法进行总结，纯属个人总结，主要涉及到以下内容：  </p>
+<blockquote>
+<ul>
+<li>编译动态链接库</li>
+<li>动态链接库加入系统路径</li>
+</ul>
+</blockquote>
+<hr>
+<h3 id="编译动态链接库"><a href="#编译动态链接库" class="headerlink" title="编译动态链接库"></a>编译动态链接库</h3><p>　　在linux 下面编译动态库主要涉及到两步，首先是使用源文件编译为链接文件，然后再把链接文件编译为动态库即可。<br>　　1. 编译源文件：需要加入-fPIC 作为编译选项<br>　　2. 编译链接文件：需要加入-shared 作为链接选项<br>　　示例代码如下：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gcc -c -fPIC hello.c hello.o</div><div class="line">gcc -shared -o libhello.so hello.o</div></pre></td></tr></table></figure></p>
+<h3 id="动态链接库加入系统路径"><a href="#动态链接库加入系统路径" class="headerlink" title="动态链接库加入系统路径"></a>动态链接库加入系统路径</h3><p>　　在linux 如何你需要让你的程序能够加入自如的使用自己编写的动态链接库，最好的办法就是把库路径加入到系统路径中，具体方法为：<br>　　1. 首先在编辑系统默认的库路径文件：<code>sudo gedit /etc/ld.so.conf</code> 把自己的库路径加入到这个文件中。<br>　　2. 更新系统库路径<code>sudo /sbin/ldconfig</code></p>
 
       
 
@@ -224,11 +228,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">boost</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
         		</li>
       		
 		</ul>
@@ -284,7 +292,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/08/31/boost-智能指针详解/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/10/27/linux-编程小结/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -298,18 +306,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/09/12/const用法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          const用法
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/08/30/视频格式h264和mp8对比/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">视频格式h264和mp8对比</div>
+    <a href="/2017/10/27/一失足成千古恨-再回头已是百年身/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">一失足成千古恨 再回头已是百年身</div>
       <i class="icon-circle-right"></i>
     </a>
   
