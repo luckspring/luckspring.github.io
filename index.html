@@ -154,6 +154,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ubuntu-部署samba" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/17/ubuntu-部署samba/">ubuntu 部署samba</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/17/ubuntu-部署samba/" class="archive-article-date">
+  	<time datetime="2017-11-17T08:16:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　在经历了virtual box的共享文件的各种折磨以后，果断舍弃共享文件夹，转战samba。本文简要概述了一下samba的部署过程。  </p>
+<h3 id="部署过程"><a href="#部署过程" class="headerlink" title="部署过程"></a>部署过程</h3><p>　　1. Ubuntu 部署的过程非常简单，直接使用源部署<code>sudo apt-get install samba samba-common</code><br>　　2. 切换到root 用户<br>　　3. 修改<code>/etc/samba/smb.conf</code>，在[global] 栏目下添加：<br>　　    workgroup = WORKGROUP<br>　　    security = user<br>　　在share defination 下添加：<br>　　[filename]<br>　　    comment = All Printers<br>　　    browseable = yes<br>　　    path = /home/pc/work<br>　　    read only = no<br>　　    valid users = <code>@your username</code><br>　　4. 添加samba 用户的密码<code>smbpasswd -a username</code><br>　　5. 激活samba 用户 <code>sabpasswd -e username</code><br>　　6. 重启samba 服务 <code>smbd restart</code> <code>nmbd start</code><br>　　7. 在windows 主机的运行中输入 <code>\\ip</code>即可访问</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">ubuntu</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">samba</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/17/ubuntu-部署samba/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-ubuntu-配置静态ip" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -365,15 +448,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">感悟</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">人生</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">感悟</a>
         		</li>
       		
 		</ul>
@@ -470,89 +553,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/09/12/const用法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-boost-智能指针详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/31/boost-智能指针详解/">boost 智能指针详解</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/31/boost-智能指针详解/" class="archive-article-date">
-  	<time datetime="2017-08-31T09:35:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>　　本文是针对在学习c++的boost库的时候遇到的问题进行的详解，因为都是学习的资料，可能有些资料不够详尽，见谅。<br>　　计算机系统中资源有很多种，其中内存是我们最常用到的，此外还有socket,文件描述符，操作系统handle,数据库连接等，程序中申请这些资源后必须及时归还系统，否则容易导致不可预知的错误。</p>
-<h2 id="BOOST-AUTO-PTR"><a href="#BOOST-AUTO-PTR" class="headerlink" title="BOOST AUTO_PTR"></a>BOOST AUTO_PTR</h2><p>　　由于程序运行过程中随时可能出现异常，c++最常见的问题就体现在如果在构造函数或者在某一模块的起始处使用了new或者其他申请内存的操作，但是中途执行时出了异常，导致没用调用模块结束时的释放或者没有调用到析构函数，就会导致内存没有得到合理的释放。针对这个问题，c++引入了异常处理机制，而引入了异常处理机制，auto_ptr就是一种非常重要的技术。<br>　　auto_ptr 引入了六种比较有用的智能指正，分别是：scoped_ptr,scoped_array,shared_ptr,shared_array,weak_ptr和instrusive_ptr。</p>
-<h3 id="scoped-ptr"><a href="#scoped-ptr" class="headerlink" title="scoped_ptr"></a>scoped_ptr</h3><p>　　scoped_ptr 包装了new操作符在堆上分配的动态对象，能够保证动态创建的对象在任何时候都可以被正确的删除，但是scoped_ptr的所有权更加严格，不能转让，一旦scoped_ptr获得了对象的管理权限，就无法再取回来。<br>　　scoped_ptr的构造函数接受的是一个类型T*的指针p,创建出一个scoped_ptr对象，并在内部保存指针参数p,p必须是一个new表示还动态分配的结果，或者是一个空指针，当scoped_ptr对象的生命周期结束时，析构函数~scoped_ptr（）会使用delete操作符自动销毁所保存的指正，从而正确的回收资源。</p>
-<h4 id="操作函数"><a href="#操作函数" class="headerlink" title="操作函数"></a>操作函数</h4><p>　　scoped_ptr把拷贝构造函数和赋值都声明为私有，禁止对scoped_ptr的拷贝和赋值。<br>　　一般情况下，该指针不支持比较操作和reset()函数。<br>　　关键在于，scoped_ptr不支持从另外一个scoped_ptr处赋值，也就是说scoped_ptr <int> p1 ,p2  p1=p2是不合法的，无法通过编译。</int></p>
-<h3 id="scoped-array"><a href="#scoped-array" class="headerlink" title="scoped_array"></a>scoped_array</h3><p>　　scoped_array 和scoped_ptr的设计思路非常类似，只是scoped_array设计使用的是new[] 数组，而不是new,也就是说这个是专门用来管理数组的智能指针。不过因为其实一个裸的数据接口，同时不能动态增长，而且没有迭代器支持，一般推荐使用victore类。  </p>
-<h3 id="share-ptr"><a href="#share-ptr" class="headerlink" title="share_ptr"></a>share_ptr</h3><p>　　share_ptr是boost库中最像指针的智能指针，同时也是使用最多，用得最广泛的智能指针。<br>　　share_ptr同样包含了new操作符，但实现的是引用计数型，可以被自由的拷贝和赋值，可以在任意的地方共享，当没有程序使用时（也就是引用计数为0）才会被析构。它同样重载了*操作符和-&gt;操作符。<br>　　share_ptr几乎可以百分百出现在new分配动态内存的地方，从而消灭delete和内存泄漏。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">boost</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/31/boost-智能指针详解/">展开全文 >></a>
         </p>
       
 
@@ -695,15 +695,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">const</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C++</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">boost</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">const</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -715,11 +715,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color2">ubuntu</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">人生</a>
+                <a href="javascript:void(0)" class="js-tag color1">samba</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">静态ip</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">c/c++</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -731,11 +739,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">静态ip</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">c/c++</a>
+                <a href="javascript:void(0)" class="js-tag color3">人生</a>
               </li>
             
             <div class="clearfix"></div>
