@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>随笔 | luckspring 的博客</title>
+  <title>ubuntu 配置静态ip | luckspring 的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="暂时想不到写什么。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="随笔">
-<meta property="og:url" content="http://yoursite.com/随笔/index.html">
+  <meta name="description" content="本文主要讲述的是如何设置静态ip,网上的配置方法虽然一大堆，但是测试了几种方法还是很蛋疼，就决定自己写一个自己配置好的方法。　　首先说一下我的环境是ubuntu 14.04 这个系统还是挺稳定的。   配置方法　　1. 首先使用切换到root用户，sudo su　　2. 编辑文档内容： gedit /etc/network/interfaces 添加如下内容：　　  auto eth0">
+<meta name="keywords" content="linux,静态ip,c&#x2F;c++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu 配置静态ip">
+<meta property="og:url" content="http://yoursite.com/2017/11/17/ubuntu-配置静态ip/index.html">
 <meta property="og:site_name" content="luckspring 的博客">
-<meta property="og:description" content="暂时想不到写什么。">
-<meta property="og:updated_time" content="2017-07-27T08:17:48.145Z">
+<meta property="og:description" content="本文主要讲述的是如何设置静态ip,网上的配置方法虽然一大堆，但是测试了几种方法还是很蛋疼，就决定自己写一个自己配置好的方法。　　首先说一下我的环境是ubuntu 14.04 这个系统还是挺稳定的。   配置方法　　1. 首先使用切换到root用户，sudo su　　2. 编辑文档内容： gedit /etc/network/interfaces 添加如下内容：　　  auto eth0">
+<meta property="og:updated_time" content="2017-11-17T08:06:03.584Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="随笔">
-<meta name="twitter:description" content="暂时想不到写什么。">
+<meta name="twitter:title" content="ubuntu 配置静态ip">
+<meta name="twitter:description" content="本文主要讲述的是如何设置静态ip,网上的配置方法虽然一大堆，但是测试了几种方法还是很蛋疼，就决定自己写一个自己配置好的方法。　　首先说一下我的环境是ubuntu 14.04 这个系统还是挺稳定的。   配置方法　　1. 首先使用切换到root用户，sudo su　　2. 编辑文档内容： gedit /etc/network/interfaces 添加如下内容：　　  auto eth0">
   
     <link rel="alternative" href="/atom.xml" title="luckspring 的博客" type="application/atom+xml">
   
@@ -153,27 +154,29 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-undefined" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-ubuntu-配置静态ip" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      随笔
+      ubuntu 配置静态ip
     </h1>
   
 
         
-        <a href="/随笔/index.html" class="archive-article-date">
-  	<time datetime="2017-07-27T08:15:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-27</time>
+        <a href="/2017/11/17/ubuntu-配置静态ip/" class="archive-article-date">
+  	<time datetime="2017-11-17T07:43:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　暂时想不到写什么。</p>
+        <p>　　本文主要讲述的是如何设置静态ip,网上的配置方法虽然一大堆，但是测试了几种方法还是很蛋疼，就决定自己写一个自己配置好的方法。<br>　　首先说一下我的环境是ubuntu 14.04 这个系统还是挺稳定的。  </p>
+<h4 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h4><p>　　1. 首先使用切换到root用户，<code>sudo su</code><br>　　2. 编辑文档内容： <code>gedit /etc/network/interfaces</code> 添加如下内容：<br>　　  auto eth0<br>　　  iface eth0 inet static<br>　　  address 192.168.11.195<br>　　  netmask 255.255.255.0<br>　　  gateway 192.168.11.1<br>　　3. 编辑<code>/etc/resov.conf</code>, 添加如下内容：<br>　　  nameserver 192.168.11.1<br>　　  nameserver 220.170.0.20<br>　　4. 编辑<code>/etc/resolvconf/resolv.conf.d/base</code> 添加如下内容：<br>　　  nameserver 192.168.11.1<br>　　  nameserver 220.170.0.20<br>　　5. 编辑<code>/etc/NetworkManager/NerworkManager.conf</code> 修改如下内容：<br>　　  将 <code>managed=false</code> 改成 <code>true</code><br>　　6. 重启网络 <code>NetworkManager restart</code>
+　　  </p>
 
       
 
@@ -213,6 +216,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">静态ip</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">c/c++</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -263,7 +285,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/随笔/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/11/17/ubuntu-配置静态ip/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -275,6 +297,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2017/10/27/linux-编程小结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">linux 编程小结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -323,7 +355,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

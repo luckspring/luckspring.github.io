@@ -154,6 +154,90 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ubuntu-配置静态ip" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/17/ubuntu-配置静态ip/">ubuntu 配置静态ip</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/17/ubuntu-配置静态ip/" class="archive-article-date">
+  	<time datetime="2017-11-17T07:43:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　本文主要讲述的是如何设置静态ip,网上的配置方法虽然一大堆，但是测试了几种方法还是很蛋疼，就决定自己写一个自己配置好的方法。<br>　　首先说一下我的环境是ubuntu 14.04 这个系统还是挺稳定的。  </p>
+<h4 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h4><p>　　1. 首先使用切换到root用户，<code>sudo su</code><br>　　2. 编辑文档内容： <code>gedit /etc/network/interfaces</code> 添加如下内容：<br>　　  auto eth0<br>　　  iface eth0 inet static<br>　　  address 192.168.11.195<br>　　  netmask 255.255.255.0<br>　　  gateway 192.168.11.1<br>　　3. 编辑<code>/etc/resov.conf</code>, 添加如下内容：<br>　　  nameserver 192.168.11.1<br>　　  nameserver 220.170.0.20<br>　　4. 编辑<code>/etc/resolvconf/resolv.conf.d/base</code> 添加如下内容：<br>　　  nameserver 192.168.11.1<br>　　  nameserver 220.170.0.20<br>　　5. 编辑<code>/etc/NetworkManager/NerworkManager.conf</code> 修改如下内容：<br>　　  将 <code>managed=false</code> 改成 <code>true</code><br>　　6. 重启网络 <code>NetworkManager restart</code>
+　　  </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">静态ip</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">c/c++</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/17/ubuntu-配置静态ip/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-linux-编程小结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -201,11 +285,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
         		</li>
       		
 		</ul>
@@ -281,15 +365,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">感悟</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">人生</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">感悟</a>
         		</li>
       		
 		</ul>
@@ -371,11 +455,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">const</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">const</a>
         		</li>
       		
 		</ul>
@@ -469,68 +553,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/08/31/boost-智能指针详解/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-视频格式h264和mp8对比" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/30/视频格式h264和mp8对比/">视频格式h264和mp8对比</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/30/视频格式h264和mp8对比/" class="archive-article-date">
-  	<time datetime="2017-08-30T02:25:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/30/视频格式h264和mp8对比/">展开全文 >></a>
         </p>
       
 
@@ -665,10 +687,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">const</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">c++</a>
               </li>
              
@@ -677,7 +695,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color1">const</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -689,11 +707,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sip</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">感悟</a>
+                <a href="javascript:void(0)" class="js-tag color4">sip</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -705,7 +723,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">感悟</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">视频格式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">静态ip</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">c/c++</a>
               </li>
             
             <div class="clearfix"></div>
