@@ -175,7 +175,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>　　在经历了virtual box的共享文件的各种折磨以后，果断舍弃共享文件夹，转战samba。本文简要概述了一下samba的部署过程。  </p>
-<h3 id="部署过程"><a href="#部署过程" class="headerlink" title="部署过程"></a>部署过程</h3><p>　　1. Ubuntu 部署的过程非常简单，直接使用源部署<code>sudo apt-get install samba samba-common</code><br>　　2. 切换到root 用户<br>　　3. 修改<code>/etc/samba/smb.conf</code>，在[global] 栏目下添加：<br>　　    workgroup = WORKGROUP<br>　　    security = user<br>　　在share defination 下添加：<br>　　[filename]<br>　　    comment = All Printers<br>　　    browseable = yes<br>　　    path = /home/pc/work<br>　　    read only = no<br>　　    valid users = <code>@your username</code><br>　　4. 添加samba 用户的密码<code>smbpasswd -a username</code><br>　　5. 激活samba 用户 <code>sabpasswd -e username</code><br>　　6. 重启samba 服务 <code>smbd restart</code> <code>nmbd start</code><br>　　7. 在windows 主机的运行中输入 <code>\\ip</code>即可访问</p>
+<h3 id="部署过程"><a href="#部署过程" class="headerlink" title="部署过程"></a>部署过程</h3><p>　　1. Ubuntu 部署的过程非常简单，直接使用源部署<code>sudo apt-get install samba samba-common</code><br>　　2. 切换到root 用户<br>　　3. 修改<code>/etc/samba/smb.conf</code>，在[global] 栏目下添加：<br>　　    workgroup = WORKGROUP<br>　　    security = user<br>　　在share defination 下添加：<br>　　[filename]<br>　　    comment = All Printers<br>　　    browseable = yes<br>　　    path = /home/pc/work<br>　　    read only = no<br>　　    valid users = <code>@your username</code><br>　　4. 添加samba 用户的密码<code>smbpasswd -a username</code><br>　　5. 激活samba 用户 <code>smbpasswd -e username</code><br>　　6. 重启samba 服务 <code>smbd restart</code> <code>nmbd start</code><br>　　7. 在windows 主机的运行中输入 <code>\\ip</code>即可访问</p>
 
       
 
@@ -735,15 +735,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">视频格式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">人生</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">视频格式</a>
               </li>
             
             <div class="clearfix"></div>
